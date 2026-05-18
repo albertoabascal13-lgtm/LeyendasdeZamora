@@ -81,7 +81,7 @@ const COMARCAS = {
     ]
   },
   'tierra-vino': {
-    num: '11', name: 'Tierra del Vino', capital: 'Fuentesaúco',
+    num: '11', name: 'Tierra del Vino', capital: 'Corrales del Vino',
     leyendas: [
       { titulo: 'La Virgen del Viso',      url: 'https://www.instagram.com/alberto_hdez13/reel/DVeWknOiNQg/' },
       { titulo: 'El Enigma de Entrala',    url: 'https://www.instagram.com/alberto_hdez13/reel/DXKcYgziBEk/' },
