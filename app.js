@@ -674,4 +674,16 @@ document.querySelectorAll('.extras-card, .escritos-back').forEach(el => {
 /* ══════════════════════════════════════
    INIT — siempre empieza en INICIO
 ══════════════════════════════════════ */
-document.addEventListener('DOMContentLoaded', () => navigate('inicio'));
+document.addEventListener('DOMContentLoaded', () => {
+  navigate('inicio');
+
+  /* ── Contadores del Buzón (dinámicos) ── */
+  const totalLeyendas = Object.values(COMARCAS)
+    .reduce((sum, c) => sum + c.leyendas.length, 0);
+  const totalCostumbres = MASCARADAS.length;
+
+  const elLey = document.getElementById('stat-leyendas');
+  const elCos = document.getElementById('stat-costumbres');
+  if (elLey) elLey.textContent = totalLeyendas;
+  if (elCos) elCos.textContent = totalCostumbres;
+});
