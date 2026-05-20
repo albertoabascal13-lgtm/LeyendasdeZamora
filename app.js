@@ -476,26 +476,29 @@ function renderQuestion() {
   questionEl.textContent = q.q;
   optionsEl.innerHTML = '';
 
-  q.opts.forEach((opt, i) => {
+  // Barajar opciones manteniendo rastro de la correcta
+  const indices = q.opts.map((_, i) => i).sort(() => Math.random() - 0.5);
+  const correctShuffled = indices.indexOf(q.ans);
+
+  indices.forEach((origIdx, shuffledIdx) => {
     const btn = document.createElement('button');
     btn.className = 'quiz-option';
-    btn.textContent = opt;
-    btn.addEventListener('click', () => selectAnswer(i, btn));
+    btn.textContent = q.opts[origIdx];
+    btn.addEventListener('click', () => selectAnswer(shuffledIdx, btn, correctShuffled));
     optionsEl.appendChild(btn);
   });
 }
 
-function selectAnswer(i, btn) {
+function selectAnswer(i, btn, correctIdx) {
   if (answered) return;
   answered = true;
 
-  const q = QUIZ[qIndex];
   const allBtns = optionsEl.querySelectorAll('.quiz-option');
 
   allBtns.forEach(b => b.disabled = true);
-  allBtns[q.ans].classList.add('correct');
+  allBtns[correctIdx].classList.add('correct');
 
-  if (i === q.ans) {
+  if (i === correctIdx) {
     score++;
   } else {
     btn.classList.add('wrong');
