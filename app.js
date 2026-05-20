@@ -313,6 +313,27 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 /* ══════════════════════════════════════
+   TEMA CLARO / OSCURO
+══════════════════════════════════════ */
+const themeToggle = document.getElementById('theme-toggle');
+const htmlEl = document.documentElement;
+
+function applyTheme(theme) {
+  htmlEl.setAttribute('data-theme', theme);
+  localStorage.setItem('leyendas-theme', theme);
+  themeToggle.textContent  = theme === 'light' ? '☾' : '☀';
+  themeToggle.title        = theme === 'light' ? 'Modo oscuro' : 'Modo claro';
+  themeToggle.setAttribute('aria-label', theme === 'light' ? 'Modo oscuro' : 'Modo claro');
+}
+
+// Cargar preferencia guardada (por defecto: oscuro)
+applyTheme(localStorage.getItem('leyendas-theme') || 'dark');
+
+themeToggle.addEventListener('click', () => {
+  applyTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+});
+
+/* ══════════════════════════════════════
    MOBILE MENU
 ══════════════════════════════════════ */
 const mobileMenu = document.getElementById('mobile-menu');

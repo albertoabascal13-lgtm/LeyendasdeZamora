@@ -1,4 +1,4 @@
-/* ─── VARIABLES ─── */
+/* ─── VARIABLES — MODO OSCURO (defecto) ─── */
 :root {
   --bg:        #100d08;
   --bg-card:   #1c1710;
@@ -7,12 +7,33 @@
   --text-muted:#8a7a58;
   --border:    rgba(221, 208, 176, 0.14);
   --accent:    #c8a96e;
+  --nav-bg:    rgba(16, 13, 8, 0.95);
+  --nav-bg-scrolled: rgba(16, 13, 8, 0.97);
+  --svg-fill:        #181410;
+  --svg-fill-hover:  #252010;
+  --svg-fill-active: #2c2416;
 
   --serif:  'Playfair Display', Georgia, serif;
   --body:   'Cormorant Garamond', Georgia, serif;
 
   --nav-h: 64px;
   --ease:  cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ─── VARIABLES — MODO CLARO ─── */
+[data-theme="light"] {
+  --bg:        #f7f2e9;
+  --bg-card:   #ede7d8;
+  --bg-hover:  #e3dccb;
+  --text:      #1c1408;
+  --text-muted:#7a6848;
+  --border:    rgba(28, 20, 8, 0.13);
+  --accent:    #8b5e20;
+  --nav-bg:    rgba(247, 242, 233, 0.95);
+  --nav-bg-scrolled: rgba(247, 242, 233, 0.97);
+  --svg-fill:        #ddd5be;
+  --svg-fill-hover:  #d0c8b0;
+  --svg-fill-active: #c4bc9e;
 }
 
 /* ─── RESET ─── */
@@ -101,11 +122,11 @@ input, textarea { font: inherit; color: inherit; }
   align-items: center;
   justify-content: space-between;
   padding: 0 2.5rem;
-  background: linear-gradient(to bottom, rgba(16,13,8,0.95) 0%, rgba(16,13,8,0) 100%);
+  background: linear-gradient(to bottom, var(--nav-bg) 0%, rgba(0,0,0,0) 100%);
   transition: background 0.4s;
 }
 #main-nav.scrolled {
-  background: rgba(16,13,8,0.97);
+  background: var(--nav-bg-scrolled);
   border-bottom: 1px solid var(--border);
 }
 
@@ -165,6 +186,24 @@ input, textarea { font: inherit; color: inherit; }
 .nav-toggle.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
 .nav-toggle.open span:nth-child(2) { opacity: 0; }
 .nav-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+/* ─── BOTÓN TEMA ─── */
+.theme-toggle {
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.3rem 0.55rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text-muted);
+  background: none;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  flex-shrink: 0;
+}
+.theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
 
 /* ─── MOBILE MENU ─── */
 #mobile-menu {
@@ -288,19 +327,19 @@ input, textarea { font: inherit; color: inherit; }
 
 /* ── SHAPES ── */
 .c-shape {
-  fill: #181410;
+  fill: var(--svg-fill);
   stroke: var(--bg);
   stroke-width: 3;
   cursor: pointer;
   transition: fill 0.18s ease, stroke 0.18s ease;
 }
 .c-shape:hover {
-  fill: #252010;
+  fill: var(--svg-fill-hover);
   stroke: rgba(200, 169, 110, 0.5);
   stroke-width: 1.5;
 }
 .c-shape.c-active {
-  fill: #2c2416;
+  fill: var(--svg-fill-active);
   stroke: var(--accent);
   stroke-width: 1.5;
 }
