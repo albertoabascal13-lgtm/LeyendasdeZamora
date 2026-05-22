@@ -1107,33 +1107,95 @@ input, textarea { font: inherit; color: inherit; }
 /* ══════════════════════════════════════
    RESPONSIVE
 ══════════════════════════════════════ */
+
+/* ── TABLET (≤900px) ── */
 @media (max-width: 900px) {
-  .map-wrap {
-    grid-template-columns: 1fr;
-    height: auto;
-  }
-  #leaflet-map { height: 55vw; min-height: 320px; }
-  .map-sidebar { border-left: none; border-top: 1px solid var(--border); }
-  .buzon-wrap {
-    grid-template-columns: 1fr;
-  }
+  /* Buzón */
+  .buzon-wrap { grid-template-columns: 1fr; gap: 2.5rem; }
   .buzon-aside { position: static; }
+
+  /* Extras */
+  .extras-grid { grid-template-columns: 1fr; }
 }
 
+/* ── MÓVIL (≤640px) ── */
 @media (max-width: 640px) {
-  #main-nav { padding: 0 1.25rem; }
+
+  /* ── NAV ── */
+  #main-nav { padding: 0 1rem; }
   .nav-links { display: none; }
   .nav-toggle { display: flex; }
+  .nav-brand { font-size: 0.68rem; letter-spacing: 0.12em; }
 
-  .hero-content { padding: calc(var(--nav-h) + 2rem) 1.25rem 3rem; }
-  .scroll-hint { left: 1.25rem; }
+  /* ── MAPA SVG: etiquetas más grandes para que se lean al escalar ── */
+  .c-label { font-size: 16px; }
+  .c-num   { font-size: 11px; }
 
-  .page-header { padding: 3.5rem 1.25rem 2.5rem; }
-  .map-wrap, .leyendas-grid, .quiz-container,
-  .calendar-list, .buzon-wrap { padding: 0 1.25rem; }
+  /* El mapa ocupa la pantalla completa y el SVG rellena bien el espacio */
+  #page-inicio { height: auto; min-height: 100dvh; }
+  .comarca-wrap {
+    padding: calc(var(--nav-h) + 0.6rem) 0.6rem 0;
+  }
+  .comarca-header {
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-bottom: 0.5rem;
+  }
+  .comarca-hint { font-size: 0.75rem; }
+  .comarca-map-container { padding-bottom: 180px; } /* espacio para el panel */
+  #comarca-svg {
+    max-height: calc(100dvh - var(--nav-h) - 120px);
+  }
 
+  /* ── PANEL ── */
+  /* (ya definido en el bloque @media 640px del panel, se complementa aquí) */
+
+  /* ── PÁGINAS GENERALES ── */
+  .page-header {
+    padding: 3rem 1.25rem 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .page-header h2 { font-size: clamp(2rem, 8vw, 3rem); }
+  .page-desc { font-size: 1rem; }
+
+  /* ── FILTROS MES ── */
+  .month-filter {
+    padding: 0 1rem;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+  .month-btn { font-size: 0.6rem; padding: 0.4rem 0.7rem; }
+
+  /* ── CALENDARIO / MASCARADAS ── */
+  .calendar-list { padding: 0 1rem; }
+  .cal-item { grid-template-columns: 64px 1fr; gap: 0.8rem; padding: 1rem 0; }
+  .cal-day  { font-size: 1.6rem; }
+  .cal-month{ font-size: 0.55rem; }
+  .cal-title{ font-size: 1rem; }
+  .cal-desc { font-size: 0.8rem; }
+  .cal-total{ padding: 0.8rem 1rem 0; font-size: 0.6rem; }
+
+  /* ── QUIZ ── */
+  .quiz-container { padding: 0 1rem; }
+  .quiz-card { padding: 1.8rem 1.2rem; }
+  .quiz-q { font-size: 1.05rem; }
+  .quiz-option { font-size: 0.9rem; padding: 0.75rem 1rem; }
+
+  /* ── BUZÓN ── */
+  .buzon-wrap { padding: 0 1.25rem; }
   .form-row { grid-template-columns: 1fr; }
+  .buzon-stats { flex-direction: row; gap: 2rem; }
+  .stat-num { font-size: 2.2rem; }
 
-  .cal-item { grid-template-columns: 70px 1fr; gap: 1rem; }
-  .cal-day { font-size: 1.8rem; }
+  /* ── EXTRAS ── */
+  .extras-grid { padding: 0 1.25rem; }
+  .extras-card { padding: 1.8rem 1.4rem; }
+  .extras-card-title { font-size: 1.2rem; }
+
+  /* ── ESCRITOS ── */
+  .escritos-wrap { padding: 0 1.25rem; }
+  .escritos-nav { padding: 1rem 1.25rem 0; flex-direction: column; gap: 0.3rem; }
+  .relato-title { font-size: clamp(1.5rem, 6vw, 2.2rem); }
+  .relato-body { font-size: 1rem; line-height: 1.8; }
+  .relato-body p:first-child::first-letter { font-size: 3rem; }
 }
