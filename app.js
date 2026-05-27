@@ -58,7 +58,7 @@ const COMARCAS = {
       { titulo: 'El Cristo de la Colada',         url: 'https://www.instagram.com/alberto_hdez13/reel/DXCt2X-CGog/' },
       { titulo: 'El Obispo Tumbado',              url: 'https://www.instagram.com/alberto_hdez13/reel/DXr28d1CBgk/' },
       { titulo: 'La Virgen de la Guía',           url: 'https://www.instagram.com/alberto_hdez13/reel/DX5GaKco118/' },
-      { titulo: 'Un Camino Mágico',              url: 'https://www.instagram.com/p/DYz57NxICIx/' }
+      { titulo: 'Un Camino Mágico',              url: 'https://www.instagram.com/alberto_hdez13/reel/DYz57NxICIx/' }
     ]
   },
   'toro': {
