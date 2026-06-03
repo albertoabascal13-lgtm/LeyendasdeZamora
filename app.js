@@ -23,7 +23,9 @@ const COMARCAS = {
   },
   'tierra-campos': {
     num: '04', name: 'Tierra de Campos', capital: 'Villalpando',
-    leyendas: []
+    leyendas: [
+      { titulo: 'Los 14 de San Martín', url: 'https://www.instagram.com/alberto_hdez13/reel/DZDdBLyRCwi/' }
+    ]
   },
   /* ── CENTRO ── */
   'aliste': {
