@@ -964,6 +964,20 @@ input, textarea { font: inherit; color: inherit; }
   color: var(--text-muted);
   font-style: italic;
 }
+.relato-badge {
+  display: inline-block;
+  margin: 0.6rem 0 0.8rem;
+  padding: 0.3rem 0.9rem;
+  border: 1px solid var(--accent);
+  border-radius: 2px;
+  font-family: var(--serif);
+  font-size: 0.78rem;
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  background: transparent;
+}
+.relato-ninos { margin-top: 4rem; padding-top: 4rem; border-top: 1px solid var(--border); }
 
 /* Cuerpo del relato — tipografía de lectura */
 .relato-body {
