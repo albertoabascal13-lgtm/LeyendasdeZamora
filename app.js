@@ -609,7 +609,7 @@ document.getElementById('buzon-form').addEventListener('submit', async function(
 /* ══════════════════════════════════════
    EXTRAS — navegación interna
 ══════════════════════════════════════ */
-document.querySelectorAll('.extras-card, .escritos-back').forEach(el => {
+document.querySelectorAll('.extras-card, .escritos-back, .folklore-back').forEach(el => {
   el.addEventListener('click', () => {
     const dest = el.dataset.page;
     if (dest) navigate(dest);
