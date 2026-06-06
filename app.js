@@ -18,7 +18,8 @@ const COMARCAS = {
     num: '03', name: 'Benavente y Los Valles', capital: 'Benavente',
     leyendas: [
       { titulo: 'La Cueva de los Moros',   url: 'https://www.instagram.com/alberto_hdez13/reel/DWjwkZ6CHXa/' },
-      { titulo: 'El Cambio de Malgrad',    url: 'https://www.instagram.com/alberto_hdez13/reel/DW11c8diLGb/' }
+      { titulo: 'El Cambio de Malgrad',    url: 'https://www.instagram.com/alberto_hdez13/reel/DW11c8diLGb/' },
+      { titulo: 'El Toro Enmaromado',      url: 'https://www.instagram.com/alberto_hdez13/reel/DZNxXQ_IZMy/' }
     ]
   },
   'tierra-campos': {
