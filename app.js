@@ -74,7 +74,8 @@ const COMARCAS = {
       { titulo: 'La Empajada',            url: 'https://www.instagram.com/alberto_hdez13/reel/DW69TPIiBPk/' },
       { titulo: 'El Baile del Niño',      url: 'https://www.instagram.com/alberto_hdez13/reel/DXch6EvCA9P/' },
       { titulo: 'Un Castillo de Hollywood', url: 'https://www.instagram.com/alberto_hdez13/reel/DYSj11jI3_H/' },
-      { titulo: '3 Templos, 1 Pueblo',      url: 'https://www.instagram.com/alberto_hdez13/reel/DYiB9VgoXVs/' }
+      { titulo: '3 Templos, 1 Pueblo',      url: 'https://www.instagram.com/alberto_hdez13/reel/DYiB9VgoXVs/' },
+      { titulo: 'Pintura y Tradición',      url: 'https://www.instagram.com/alberto_hdez13/reel/DZdPdLlxarW/' }
     ]
   },
   /* ── SUR ── */
