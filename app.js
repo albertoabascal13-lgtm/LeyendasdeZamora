@@ -276,6 +276,65 @@ const MASCARADAS = [
 ];
 
 /* ══════════════════════════════════════
+   ESCRITOS DATA
+══════════════════════════════════════ */
+const ESCRITOS = [
+  {
+    id: 'zamora-la-vieja',
+    eyebrow: 'RELATO · TIERRA DEL PAN',
+    badge: null,
+    title: 'Zamora la Vieja',
+    author: 'Por Alberto Hernández',
+    paragraphs: [
+      'No pretendo que me creáis, pero quiero dejar constancia de lo sucedido, es difícil escribir sobre ello pero he de hacerlo, paso a relatar a continuación lo que vivimos mi hermano y yo en este misterioso lugar.',
+      'Era un día tan normal como cualquier otro, salvo con la excepción de que Jose y yo aprovecharíamos la mañana para visitar Castrotorafe, un lugar levantado allá por el Siglo XI y que Alfonso VII vio en su emplazamiento un lugar muy importante a nivel estratégico, debido a ello concedió al pueblo poder sobre varias localidades de los alrededores y más adelante pasó a manos de la Orden de caballería de Santiago, todo indica que en el año 1176.',
+      'No me perderé con más datos, salvo un par de apuntes que son vitales en esta historia: el lugar fue quedando progresivamente despoblado debido a epidemias de peste y en el Siglo XVII ya se encontraba totalmente vacío. El segundo dato importante: la ermita mantuvo su esplendor hasta que en el Siglo XIX las tropas de Napoleón decidieron que sería una buena idea llevarse todo lo que pudieran de ella.',
+      'Como en otras aventuras preparamos una mochila con todo lo indispensable: botellas de agua, barritas energéticas, linternas pequeñas, trípode para los teléfonos móviles y una hoja de ruta.',
+      'Llegar hasta allí no fue complicado a pesar de que para llegar a la vieja Zamora haya que desviarse de la carretera y girar hacia un camino que por suerte se encuentra señalizado.',
+      'Dejamos el coche en el margen derecho, por si alguien más quería visitar las ruinas de lo que antaño fue una ciudad fortificada con un puente que permitía la entrada de diversas mercancías, un puente que quedó sumergido en el embalse.',
+      'Comenzamos a caminar y subimos una pequeña cuesta. Es difícil en la actualidad hacerse una idea de cómo pudo haber sido hace diez siglos: piedras por uno y otro lado, y una pared en pie. Eso que ahora es completamente vulgar había sido la vieja ermita alguna vez.',
+      'Nos asomamos al embalse de Ricobayo y desde la lejanía pudimos contemplar la felicidad de la gente que iba allí a pasar el día. Eran ajenos a todo lo que estaba por llegar, a tan solo unos cientos de metros de allí.',
+      'Seguimos nuestra expedición. El castillo se conserva relativamente bien, el tiempo le ha jugado una mala pasada pero han conseguido poner freno de momento a su caída. No nos lo pensamos dos veces cuando comprobamos que a pesar de la valla de seguridad se podía entrar; un gran agujero invita a todo aquel que quiera verlo desde cerca.',
+      'Entramos y recorrimos cada rincón visitable, siempre con cuidado: una construcción con tantos siglos a sus espaldas puede jugar una mala pasada, cada paso fue calculado. Decidimos que sería una buena idea volver por la noche; estos lugares tan especiales engañan según a la hora que vayas.',
+      'Llegó la oscuridad. La luna llena iluminaba desde lo alto y las estrellas asomaban. Qué placer estar lejos de la civilización para contemplar algo así.',
+      'Cuando entramos en el terreno de la antigua ciudad notamos algo diferente. Se levantó aire frío cuando hacía tan solo unos segundos todo estaba en calma, las hojas comenzaron a mecerse y los ruidos de la noche fueron apareciendo poco a poco.',
+      'Seguimos caminando con nuestras linternas encendidas, apuntando a cada rincón. Sentíamos que en cualquier momento un animal podría cruzarse ante nosotros o, quién sabe, quizás allí había otras personas visitando las ruinas. Aumentamos la precaución; nos comunicábamos prácticamente con susurros. Jose apuntaba hacia el frente y a la izquierda, mientras que yo lo hacía a la derecha, girándome también por si alguien nos seguía, y es que parecía que mil ojos nos acechaban.',
+      'En más de una ocasión estuvimos a punto de irnos, pero nos convencíamos diciendo que todo eso era producto de la sugestión. Y así, entre dudas, llegamos hasta el castillo.',
+      'Voces. Sí, voces. Débiles, apenas audibles, pero al fin y al cabo, voces. Procedían del interior. ¿Nos habrían adelantado durante el trayecto? En el camino no había más coches aparcados y tampoco los habíamos visto durante nuestra travesía.',
+      'Algo se movió detrás de nosotros. Las pisadas fueron audibles: un correteo rápido, su sonido se perdió entre la maleza. Miré a mi hermano y nos entendimos; era peor desandar lo andado que entrar por el agujero del vallado. En el peor de los casos serían un grupo de amigos haciendo botellón.',
+      'Dejamos una sola linterna encendida. La luna llena ofrecía algo de luz para no errar nuestros pasos; nos acercamos con sigilo y entramos en la edificación. Allí no había absolutamente nadie, pero se seguían escuchando voces que aumentaban su intensidad como si estuviéramos llegando al epicentro.',
+      'Eran tantas que era complicado distinguir alguna palabra: se entremezclaban, venían del frente, de atrás, de la derecha, de la izquierda. Pero no había nadie. Y otra vez las pisadas; ahora no solo eran de una persona que correteaba, eran muchas más. Pasos cortos, pasos largos, lentos, agonizantes, veloces, estresantes…',
+      'Y algo nos heló la sangre: suspiros y lamentos a nuestra espalda, tan cerca que eran ensordecedores. Incluso sentíamos cómo el aliento de aquello que estuviese ahí nos pegaba en el cuello.',
+      'Echamos a correr. Una huida hacia adelante; la linterna se cayó al suelo y cada vez estábamos más cerca de llegar hasta el final del castillo, hasta su última pared. Nos detuvimos pensando cuál sería nuestro siguiente movimiento, mientras que ahora sí, voces en castellano antiguo y en francés se cernían sobre nosotros. Aquello era invisible, pero estaba ahí.',
+      'Cerramos los ojos unos segundos y al abrirlos estábamos dentro del coche: Jose en el asiento del copiloto con la mochila sobre sus piernas y yo en el asiento del piloto. Nos miramos y sin decir ni una sola palabra emprendimos el camino de vuelta.',
+      'A pesar de que han pasado unos meses, ha sido complicado escribir todo esto. Cuando llegamos a casa comprobamos que faltaba la linterna que se nos había caído y que la mochila había sido rasgada: un corte de arriba hasta abajo, profundo.',
+      'Por más que hemos repasado en frío todo lo que vivimos aquella noche nos ha sido imposible encontrar una explicación. Para nosotros fue algo real, por muy increíble que pueda parecer; no encontramos sentido a lo ocurrido.',
+      'Lo hemos mantenido en secreto hasta ahora. No podemos seguir así porque nos come por dentro. Sabemos que vamos a ser tomados por locos y que la única solución que aparece en el horizonte es volver a Zamora la Vieja.',
+      'Nos inquieta, pero debemos regresar. Algo nos llama durante la noche, nos invita a volver…'
+    ]
+  },
+  {
+    id: 'cristo-batallas',
+    eyebrow: 'LEYENDA PARA NIÑOS · ALFOZ DE TORO',
+    badge: '✦ Versión para niños de «El Cristo de las Batallas»',
+    title: 'El Cristo de las Batallas',
+    author: 'Por Alberto Hernández',
+    paragraphs: [
+      'Hace mucho tiempo, en el año 1476, las tierras de Toro estaban en guerra. Cerca del río Duero se iba a decidir el futuro de los reyes. Don Pedro, que era un guerrero valiente y muy fiel a su ciudad, estaba desesperado por unirse a sus compañeros en la batalla. Montó en su caballo, ajustó su armadura y salió galopando, pero al llegar a la orilla del río comprobó que bajaba tan bravo y tan lleno de agua que era imposible cruzarlo.',
+      'Desde la distancia, Don Pedro veía el polvo de la batalla y escuchaba el chocar de las espadas. Se sentía fatal. Pensaba: «Mis amigos se están esforzando y yo estoy aquí parado por culpa de la corriente». Desesperado, se bajó del caballo, hincó las rodillas en el suelo y rezó con todas sus fuerzas al Cristo de las Batallas, el patrón de los toresanos.',
+      'Pasó el tiempo y la batalla terminó. A la mañana siguiente, Don Pedro, sintiéndose un poco avergonzado por no haber podido pelear, fue a la ermita.',
+      'Estaba solo, triste y confundido. De pronto, ocurrió algo increíble: la iglesia se llenó de una luz cegadora y una voz potente, pero muy tranquila, que le habló directamente:',
+      '«Don Pedro, no estés triste. Vi que querías ayudar con todo tu corazón, así que yo mismo ocupé tu lugar. Tomé tu armadura, monté en tu caballo y luché por ti para que nadie pudiera decir que faltaste a tu deber.»',
+      'Don Pedro se quedó de piedra. ¡El mismísimo Cristo le había sustituido para ayudarle porque su intención era noble! Al salir de la ermita, todavía estaba tan impresionado que caminaba dando tumbos, ¡casi no podía ni hablar del asombro!',
+      'Desde aquel día, Don Pedro cambió su vida. Decidió que, si había recibido semejante milagro, dedicaría todo su esfuerzo a ayudar a los demás y a seguir a la reina Isabel. Y así lo hizo hasta el final de sus días, siempre acompañado por sus valientes compañeros de Toro.',
+      'Y por eso, si alguna vez visitáis la ermita en Toro, recordad que allí se cuenta la historia de un caballero que, aunque no pudo cruzar el río, estuvo presente en la batalla gracias a un milagro que hoy, cientos de años después, seguimos recordando.'
+    ]
+  }
+];
+
+let currentStory = null;
+
+/* ══════════════════════════════════════
    ROUTER
 ══════════════════════════════════════ */
 const pages = document.querySelectorAll('.page');
@@ -296,6 +355,8 @@ function navigate(id) {
 
   if (id === 'calendario')  renderCalendar();
   if (id === 'mascaradas')  renderMascaradas();
+  if (id === 'escritos')    renderEscritos();
+  if (id === 'story')       renderStory();
 }
 
 navLinks.forEach(el => {
@@ -617,6 +678,53 @@ document.querySelectorAll('.extras-card, .escritos-back, .folklore-back').forEac
     if (dest) navigate(dest);
   });
 });
+
+/* ══════════════════════════════════════
+   ESCRITOS — índice y visor
+══════════════════════════════════════ */
+function renderEscritos() {
+  const list = document.getElementById('escritos-list');
+  if (!list) return;
+  list.innerHTML = '';
+  ESCRITOS.forEach(story => {
+    const li = document.createElement('li');
+    li.className = 'escritos-item';
+    li.innerHTML = `
+      <div class="escritos-item-info">
+        <span class="escritos-item-eyebrow">${story.eyebrow}</span>
+        ${story.badge ? `<span class="escritos-item-badge">${story.badge}</span>` : ''}
+        <span class="escritos-item-title">${story.title}</span>
+        <span class="escritos-item-author">${story.author}</span>
+      </div>
+      <span class="escritos-item-arrow">→</span>
+    `;
+    li.addEventListener('click', () => {
+      currentStory = story.id;
+      navigate('story');
+    });
+    list.appendChild(li);
+  });
+}
+
+function renderStory() {
+  const story = ESCRITOS.find(s => s.id === currentStory);
+  if (!story) return;
+  const content = document.getElementById('story-content');
+  const breadcrumb = document.getElementById('story-breadcrumb');
+  if (breadcrumb) breadcrumb.textContent = 'ESCRITOS · ' + story.title.toUpperCase();
+  if (!content) return;
+  content.innerHTML = `
+    <header class="relato-header">
+      <span class="relato-eyebrow">${story.eyebrow}</span>
+      ${story.badge ? `<span class="relato-badge">${story.badge}</span>` : ''}
+      <h1 class="relato-title">${story.title}</h1>
+      <p class="relato-meta">${story.author}</p>
+    </header>
+    <div class="relato-body">
+      ${story.paragraphs.map(p => `<p>${p}</p>`).join('')}
+    </div>
+  `;
+}
 
 /* ══════════════════════════════════════
    COMARCA MAP INTERACTION

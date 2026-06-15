@@ -979,6 +979,64 @@ input, textarea { font: inherit; color: inherit; }
 }
 .relato-ninos { margin-top: 4rem; padding-top: 4rem; border-top: 1px solid var(--border); }
 
+/* ─── ESCRITOS — índice ─── */
+.escritos-index-header { margin-bottom: 2.5rem; }
+.escritos-index-title {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 900;
+  color: var(--text);
+  margin: 0.4rem 0 0.6rem;
+}
+.escritos-index-desc { font-size: 1rem; color: var(--text-muted); max-width: 54ch; }
+
+.escritos-list { list-style: none; }
+.escritos-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.4rem 0.6rem;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.18s var(--ease), padding 0.18s var(--ease);
+  border-radius: 4px;
+}
+.escritos-item:first-child { border-top: 1px solid var(--border); }
+.escritos-item:hover { background: var(--bg-hover); padding-left: 1.2rem; }
+.escritos-item-info { display: flex; flex-direction: column; gap: 0.3rem; }
+.escritos-item-eyebrow {
+  font-family: var(--serif);
+  font-size: 0.7rem;
+  font-variant: small-caps;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+}
+.escritos-item-badge {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.15rem 0.55rem;
+  border: 1px solid var(--accent);
+  border-radius: 2px;
+  font-size: 0.72rem;
+  font-family: var(--serif);
+  color: var(--accent);
+}
+.escritos-item-title {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.escritos-item-author { font-size: 0.82rem; color: var(--text-muted); font-style: italic; }
+.escritos-item-arrow {
+  font-size: 1.1rem;
+  color: var(--accent);
+  flex-shrink: 0;
+  transition: transform 0.18s var(--ease);
+}
+.escritos-item:hover .escritos-item-arrow { transform: translateX(5px); }
+
 /* ─── FOLKLORE Y LEYENDAS ─── */
 .folklore-intro { margin-bottom: 2rem; }
 .folklore-title {
