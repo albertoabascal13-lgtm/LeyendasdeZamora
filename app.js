@@ -97,7 +97,8 @@ const COMARCAS = {
   'guarena': {
     num: '12', name: 'La Guareña', capital: 'Fuentesaúco',
     leyendas: [
-      { titulo: 'La Reina Cautiva', url: 'https://www.instagram.com/alberto_hdez13/reel/DYbmA5tIfhw/' }
+      { titulo: 'La Reina Cautiva',   url: 'https://www.instagram.com/alberto_hdez13/reel/DYbmA5tIfhw/' },
+      { titulo: '8 Días de Infierno', url: 'https://www.instagram.com/alberto_hdez13/reel/DZvQ8mBo7u5/' }
     ]
   }
 };
