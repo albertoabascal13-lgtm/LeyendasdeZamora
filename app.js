@@ -41,7 +41,9 @@ const COMARCAS = {
   },
   'alba': {
     num: '07', name: 'Tierra de Alba', capital: 'Alba de Aliste',
-    leyendas: []
+    leyendas: [
+      { titulo: 'La Virgen que sobrevivió al Fuego', url: 'https://www.instagram.com/alberto_hdez13/reel/DaBLFr7oFbl/' }
+    ]
   },
   'tierra-pan': {
     num: '08', name: 'Tierra del Pan', capital: 'Zamora',
@@ -75,7 +77,8 @@ const COMARCAS = {
       { titulo: 'El Baile del Niño',      url: 'https://www.instagram.com/alberto_hdez13/reel/DXch6EvCA9P/' },
       { titulo: 'Un Castillo de Hollywood', url: 'https://www.instagram.com/alberto_hdez13/reel/DYSj11jI3_H/' },
       { titulo: '3 Templos, 1 Pueblo',      url: 'https://www.instagram.com/alberto_hdez13/reel/DYiB9VgoXVs/' },
-      { titulo: 'Pintura y Tradición',      url: 'https://www.instagram.com/alberto_hdez13/reel/DZdPdLlxarW/' }
+      { titulo: 'Pintura y Tradición',                          url: 'https://www.instagram.com/alberto_hdez13/reel/DZdPdLlxarW/' },
+      { titulo: 'El Castillo Derrotado pero Jamás Vencido',   url: 'https://www.instagram.com/alberto_hdez13/reel/DZ5cvyyokNV/' }
     ]
   },
   /* ── SUR ── */
