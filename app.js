@@ -31,7 +31,9 @@ const COMARCAS = {
   /* ── CENTRO ── */
   'aliste': {
     num: '05', name: 'Aliste', capital: 'Alcañices',
-    leyendas: []
+    leyendas: [
+      { titulo: 'La Noche de Ánimas', url: 'https://www.instagram.com/alberto_hdez13/reel/DaTYxWnxoYk/' }
+    ]
   },
   'tabara': {
     num: '06', name: 'Tierra de Tábara', capital: 'Tábara',
