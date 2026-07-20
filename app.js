@@ -341,6 +341,25 @@ const ESCRITOS = [
 ];
 
 let currentStory = null;
+let currentStorySource = 'escritos';
+
+/* ══════════════════════════════════════
+   FOLKLORE DATA
+══════════════════════════════════════ */
+const FOLKLORE = [
+  {
+    id: 'peleas-de-arriba',
+    eyebrow: 'GUIÓN · TIERRA DEL VINO',
+    badge: null,
+    title: 'Peleas de Arriba llama',
+    author: 'Por Alberto Hernández',
+    paragraphs: [
+      'Peleas de Arriba es un pequeño municipio de la comarca de la Tierra del Vino, en Zamora. En 1201, Berenguela de Castilla dio a luz, mientras acampaba en el monte camino de Zamora, a Fernando III el Santo, clave en la reconquista y en la unificación de los territorios de León y Castilla. Fernando siempre mantuvo un vínculo especial con su tierra. En el entorno de Peleas de Arriba, junto a la antigua Vía de la Plata, existía un albergue de peregrinos fundado por un religioso zamorano, Martín Cid. En el año 1232, Fernando III ordenó trasladar y ampliar ese núcleo hasta convertirlo en uno de los grandes monasterios cistercienses de España, el monasterio de Nuestra Señora de Valparaíso, que llegó a ser un centro de poder espiritual y económico.',
+      'Pero con las desamortizaciones del siglo XIX quedó abandonado y desapareció. Hoy podemos ver una pequeña capilla en forma de torre, y algunas piedras también, que recuerdan que en este sitio nació el rey. En el pueblo, la iglesia principal es la de Nuestra Señora de la Asunción, una iglesia con raíces románicas. También se la conoce como la iglesia de San Fernando, en honor al rey santo. En su interior hay imágenes muy valiosas, como la Virgen del Consuelo, del siglo XVI, y la de San Fernando, que es el patrón de las fiestas de la localidad.',
+      'Cerca, en el Quejigal de Valparaíso, se encuentra el mirador del Pico Pájaro a novecientos cinco metros de altitud. Desde allí se ve la fauna, el paisaje y los montes de Peleas. Es un punto ideal para hacer senderismo, respirar el aire puro de la comarca y para recordar cómo estos bosques fueron refugio de viajeros y peregrinos. Un monasterio, un rey, una iglesia y una montaña, todo en el mismo lugar. ¿Cuándo te vas a pasar a conocer la cuna de un rey y su mirador?'
+    ]
+  }
+];
 
 /* ══════════════════════════════════════
    ROUTER
@@ -364,6 +383,7 @@ function navigate(id) {
   if (id === 'calendario')  renderCalendar();
   if (id === 'mascaradas')  renderMascaradas();
   if (id === 'escritos')    renderEscritos();
+  if (id === 'folklore')    renderFolklore();
   if (id === 'story')       renderStory();
 }
 
@@ -690,11 +710,10 @@ document.querySelectorAll('.extras-card, .escritos-back, .folklore-back').forEac
 /* ══════════════════════════════════════
    ESCRITOS — índice y visor
 ══════════════════════════════════════ */
-function renderEscritos() {
-  const list = document.getElementById('escritos-list');
-  if (!list) return;
-  list.innerHTML = '';
-  ESCRITOS.forEach(story => {
+function buildStoryList(listEl, dataArray, source) {
+  if (!listEl) return;
+  listEl.innerHTML = '';
+  dataArray.forEach(story => {
     const li = document.createElement('li');
     li.className = 'escritos-item';
     li.innerHTML = `
@@ -708,19 +727,35 @@ function renderEscritos() {
     `;
     li.addEventListener('click', () => {
       currentStory = story.id;
+      currentStorySource = source;
       navigate('story');
     });
-    list.appendChild(li);
+    listEl.appendChild(li);
   });
 }
 
+function renderEscritos() {
+  buildStoryList(document.getElementById('escritos-list'), ESCRITOS, 'escritos');
+}
+
+function renderFolklore() {
+  buildStoryList(document.getElementById('folklore-list'), FOLKLORE, 'folklore');
+}
+
 function renderStory() {
-  const story = ESCRITOS.find(s => s.id === currentStory);
+  const pool = currentStorySource === 'folklore' ? FOLKLORE : ESCRITOS;
+  const story = pool.find(s => s.id === currentStory);
   if (!story) return;
-  const content = document.getElementById('story-content');
+
+  const backBtn    = document.getElementById('story-back');
   const breadcrumb = document.getElementById('story-breadcrumb');
-  if (breadcrumb) breadcrumb.textContent = 'ESCRITOS · ' + story.title.toUpperCase();
+  const content    = document.getElementById('story-content');
+
+  const backLabel = currentStorySource === 'folklore' ? '← FOLKLORE' : '← ESCRITOS';
+  if (backBtn) { backBtn.dataset.page = currentStorySource; backBtn.textContent = backLabel; }
+  if (breadcrumb) breadcrumb.textContent = currentStorySource.toUpperCase() + ' · ' + story.title.toUpperCase();
   if (!content) return;
+
   content.innerHTML = `
     <header class="relato-header">
       <span class="relato-eyebrow">${story.eyebrow}</span>
