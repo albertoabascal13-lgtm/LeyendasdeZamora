@@ -409,6 +409,68 @@ const FOLKLORE = [
       'Su hijo, Diego de Ulloa, más tarde, unos cuantos años, se puso del lado de los comuneros, que se alzaron contra el rey Carlos I por los abusos de su gobierno. Tras la derrota de los comuneros, el rey lo condenó a muerte, pero Diego salvó la vida pagando una gran suma de dinero y recuperó sus bienes, incluido el castillo de Villalonso, de modo que la familia siguió siendo señora de estas tierras. Hoy el castillo es de propiedad privada y ahora mismo se puede visitar los domingos de doce de la mañana a dos de la tarde.',
       'Es una fortaleza medieval que sigue en pie, que está perfectamente conservada y que además nos recuerda quién fue y quién quiso mandar en esta tierra. Os invito a todos y todas a que visitéis Villalonso y su castillo, que además allí os explican la historia, la fascinante historia de este lugar.'
     ]
+  },
+  {
+    id: '8-dias-de-infierno',
+    eyebrow: 'GUIÓN · LA GUAREÑA',
+    badge: null,
+    title: '8 Días de Infierno',
+    author: 'Por Alberto Hernández',
+    paragraphs: [
+      'Imagina que tu pueblo arde ocho días seguidos. Ocho días viendo cómo tu casa se convierte en ceniza. Esto no es ninguna peli. Pasó de verdad a finales del siglo diecinueve en un pequeño pueblo de La Guareña llamado Guarrate, que tampoco es un nombre cualquiera, porque muchos creen que viene del árabe wadi ras, entre dos aguas, entre dos valles. Y mirando el mapa, la verdad es que sí que tiene sentido. Durante siglos, Guarrate fue un señorío, primero del marqués de Viesca de la Sierra. Su casa palacio del siglo quince todavía es hoy el ayuntamiento.',
+      'En 1900 el pueblo ya pertenecía a los marqueses de Santa María de Silvela. Ese año el fuego se desató y no fue un susto solo de unas horas. El incendio duró ocho días. Ocho. Las llamas arrasaron buena parte de las casas de Guarrate. El pueblo quedó prácticamente en ruinas. Pero aquí viene lo que casi nadie cuenta. Los marqueses de Santa María de Silvela, propietarios del pueblo, regalaron a sus vecinos toda la madera necesaria para volver a levantar sus casas.',
+      'Guarrate se reconstruyó desde las cenizas gracias a esa madera. De aquel incendio nació un pueblo nuevo, pero con las mismas calles, el mismo cerro. Eso sí, reconstruido tabla a tabla. Años después, ya en 1924, la propiedad se vendió a cinco vecinos de Fuentelsauco y el pueblo pasó por fin a manos de gente de la zona. Piensa un momento en tu barrio, en tu pueblo. ¿Te imaginas perderlo todo en ocho días y tener que empezar de cero?',
+      '¿Y si tuvieras que reconstruir tu vida desde las cenizas? ¿Por dónde empezarías?'
+    ]
+  },
+  {
+    id: 'pintura-y-tradicion',
+    eyebrow: 'GUIÓN · ALFOZ DE TORO',
+    badge: null,
+    title: 'Pintura y Tradición',
+    author: 'Por Alberto Hernández',
+    paragraphs: [
+      'Hoy en Toro os voy a enseñar algo muy curioso. Y no, no es el Toro de Piedra. Aquí aparece una figura que recuerda al universo de Deli Tejero, la artista toresana que hizo de sus brujas una de sus señas más reconocibles. Un guiño local y muy de Toro, la bruja Taruja. Momento de descubrir algunos elementos del folclore toresano, como por ejemplo, la pinta de Cristóbal Colón, que llevó vino de la ciudad en el descubrimiento de América en 1492. O atentos, atentas, esta mujer que está regando sus flores y que parece que nos mira desde la ventana.',
+      'O el enfrentamiento entre dos poetas como Góngora y Quevedo, con esos versos dedicados a Toro y su vino. O esta niña que mira curiosa a través de la puerta. ¿Y a quién no le gusta el vino en Toro? A los religiosos les encanta, como son estos tres claros ejemplos. Cómo lo catan, ¿verdad? Y acabamos nuestro recorrido en un lugar mágico como es la ermita de Santa María de la Vega o la ermita del Cristo de las Batallas. Todas esas pinturas que habéis visto pertenecen a artistas toresanos.',
+      'Os invito a venir a Toro y también a descubrir esas pinturas, porque hablan de la historia y de la identidad de todos los toresanos.'
+    ]
+  },
+  {
+    id: 'el-toro-enmaromado',
+    eyebrow: 'GUIÓN · BENAVENTE Y LOS VALLES',
+    badge: null,
+    title: 'El Toro Enmaromado',
+    author: 'Por Alberto Hernández',
+    paragraphs: [
+      '¿Sabías que una de las tradiciones más famosas de Benavente nació de una tragedia? Hoy te cuento una leyenda que mezcla historia, tragedia y tradición. Es la del toro enmaromado. Dicen que los condes de Benavente tenían un hijo que le gustaba salir a pasear por la ciudad y por los alrededores, aunque esto no fuese del todo seguro. En uno de esos paseos se acercó a una dehesa y se topó con un toro bravo que se había escapado de una ganadería cercana. El encuentro fue fatal para el chico. El toro lo embistió y lo mató en el acto.',
+      'Cuando los condes se enteraron, ordenaron buscar al toro y matarlo. Pero la tristeza no fue lo único que quedó en palacio. La condesa, movida por el dolor y la venganza, mandó que cada año, en la víspera del Corpus Christi, la gente corriera por las calles un toro con una soga atada a los cuernos. Y el castigo, además, no terminaba ahí. Después del recorrido, el toro era sacrificado y su carne repartida entre todos los asistentes. Una tradición durísima que con el tiempo se fue transformando hasta convertirse en la celebración popular que hoy conocemos.',
+      'En los archivos aparecen festejos taurinos en Benavente ya en 1434, mucho antes de que alguien escribiera sobre la condesa. En el siglo XVII, además, se habla de un buey enmaromado, ligado al Corpus, pagado por el Ayuntamiento o por el matadero, no por una noble, desesperada y movida por la venganza. Ahora que sabes que detrás de esta fiesta donde predomina el júbilo y las charangas, hay dolor, leyenda y también mucha historia, ¿tú con qué te quedas? ¿Con la condesa vengativa o con los viejos documentos del archivo?'
+    ]
+  },
+  {
+    id: 'los-14-de-san-martin',
+    eyebrow: 'GUIÓN · TIERRA DE CAMPOS',
+    badge: null,
+    title: 'Los 14 de San Martín',
+    author: 'Por Alberto Hernández',
+    paragraphs: [
+      'En un pueblo diminuto, perdido en la estepa de Zamora, hubo hace dos siglos un árbol del que colgaron a catorce hombres. Y no eran bandidos, eran vecinos. Durante la Guerra de la Independencia, aquí se capturó a unos soldados franceses y los españoles fusilaron a uno de ellos. La respuesta fue brutal. El general francés Juniers ordenó incendiar el pueblo y colgar de las ramas de un único árbol a los hombres que encontraron a su paso. Catorce cuerpos balanceándose sobre la entrada del pueblo, catorce familias mirando hacia arriba sin poder hacer nada.',
+      'A esos vecinos los acabaron enterrando dentro de la iglesia unos años más tarde, en 1824. Pero el árbol, el árbol se quedó grabado en la memoria. Durante mucho tiempo, cuando la gente entraba o salía del pueblo y pasaba por el lugar donde se decía que estuvo ese árbol, se paraba un momento y rezaba una oración en silencio. Nadie necesitaba una placa ni una cruz. Bastaba con mirar solo ese sitio y recordar. Y aquí es donde entra otra figura. Dentro de la iglesia de San Martín de Tours se guarda la imagen más querida del pueblo, el Cristo del Coro, un crucificado gótico al que llevan venerando siglos y al que dedican su fiesta más grande cada 20 de septiembre.',
+      'Imagínate la escena. Fuera el lugar donde colgaron a catorce hombres. Dentro de la iglesia, un Cristo crucificado ante el que sus descendientes se arrodillan en el mismo templo donde están enterrados. En San Martín de Valderaduey quizá ya no esté el árbol de los ahorcados, pero hay pueblos donde la memoria pesa y pesa mucho. La pregunta es: si supieras exactamente dónde estuvo ese árbol, ¿te atreverías a pasar solo por ahí de noche? Por cierto, en San Martín hay muchas cruces en sus calles.',
+      'Os reto a encontrarlas todas.'
+    ]
+  },
+  {
+    id: 'un-camino-magico',
+    eyebrow: 'GUIÓN · TIERRA DEL PAN',
+    badge: null,
+    title: 'Un Camino Mágico',
+    author: 'Por Alberto Hernández',
+    paragraphs: [
+      'Hay nombres que suenan bonitos y hay nombres como Roales del Pan, que está ahí atrás, que esconden siglos de frontera, repoblación y camino. Porque aquí no estamos hablando de un pueblo cualquiera. Estamos hablando de un enclave repoblado por los monarcas del Reino de León entre los siglos diez y doce, cuando esta tierra era frontera, avance y supervivencia. Durante siglos, Roales fue lugar de realengo dentro de la Tierra del Pan. Y eso significa que formó parte de una historia mucho mayor: la de los reyes, los caminos y la organización de un territorio que se estaba levantando desde cero.',
+      'Y por si eso fuera poco, por el pueblo pasa la Vía de la Plata, una ruta histórica del Camino de Santiago. Todavía hoy se pueden ver peregrinos cruzando el núcleo urbano igual que lo hicieron hace siglos. De hecho, en la entrada y salida del pueblo aparecen antiguos miliarios, esas piedras que marcaban la ruta como si el pasado siguiera señalando el camino. Y en el centro de todo está la iglesia de Nuestra Señora de la Asunción, con raíces del siglo quince o XVI, portada original y piezas históricas en su interior, que recuerdan que este pueblo siempre tuvo algo más que nombre.',
+      'Tuvo peso, paso e historia. Así que la próxima vez que escuches Roales del Pan, no pienses solo en pan, piensa en frontera medieval, en repoblación, en peregrinos y en un pueblo que lleva siglos vigilando el camino. Porque Roales del Pan se entiende mirando la historia.'
+    ]
   }
 ];
 
