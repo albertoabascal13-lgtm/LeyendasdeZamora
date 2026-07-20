@@ -358,6 +358,57 @@ const FOLKLORE = [
       'Pero con las desamortizaciones del siglo XIX quedó abandonado y desapareció. Hoy podemos ver una pequeña capilla en forma de torre, y algunas piedras también, que recuerdan que en este sitio nació el rey. En el pueblo, la iglesia principal es la de Nuestra Señora de la Asunción, una iglesia con raíces románicas. También se la conoce como la iglesia de San Fernando, en honor al rey santo. En su interior hay imágenes muy valiosas, como la Virgen del Consuelo, del siglo XVI, y la de San Fernando, que es el patrón de las fiestas de la localidad.',
       'Cerca, en el Quejigal de Valparaíso, se encuentra el mirador del Pico Pájaro a novecientos cinco metros de altitud. Desde allí se ve la fauna, el paisaje y los montes de Peleas. Es un punto ideal para hacer senderismo, respirar el aire puro de la comarca y para recordar cómo estos bosques fueron refugio de viajeros y peregrinos. Un monasterio, un rey, una iglesia y una montaña, todo en el mismo lugar. ¿Cuándo te vas a pasar a conocer la cuna de un rey y su mirador?'
     ]
+  },
+  {
+    id: 'la-pega',
+    eyebrow: 'GUIÓN · LA GUAREÑA',
+    badge: null,
+    title: 'La Pega',
+    author: 'Por Alberto Hernández',
+    paragraphs: [
+      'Hoy estamos en Argujillo, un pequeño pueblo con una gran historia que espera ser contada. En el centro de Argujillo se levanta la Iglesia de la Asunción, un templo del siglo XVI sencillo y elegante que tiene una sola nave completamente abovedada. Su esbelta torre se alza más de treinta metros sobre el pueblo y dentro se guarda el Cristo de la Oliva, una talla muy anterior al propio edificio. Durante siglos, aquí se han celebrado bautizos, bodas y despedidas. Esta iglesia es el corazón espiritual de Argujillo.',
+      'Y precisamente aquí os voy a contar una de las leyendas más queridas de la comarca, la de la Pega. Cuenta la tradición que, estando el pueblo en procesión con la Virgen de la Salud, una urraca, atraída por el brillo, se lanzó y le arrebató el anillo a la imagen como una auténtica ladrona de joya. Desde entonces, cada 9 de febrero, Argujillo celebra la fiesta de la Pega con la Virgen de la Salud como centro de todo: eucaristía, procesión por las calles y la subasta de los brazos de las andas, donde se sube a los niños para recibir la bendición.',
+      'Hasta el año 2015, esa subasta se hacía en celemín, la vieja medida del cereal, convirtiendo el grano en moneda simbólica de devoción. Hoy se paga en euros, pero el gesto conserva la misma fuerza de siempre. El frontón y esta vieja plaza de toros junto a la ribera completan ese paisaje de pueblo castellano donde todavía se escucha el eco de sus fiestas y de sus encierros.',
+      'Y si queréis seguir conociendo la historia de nuestros pueblos, déjame un comentario para que el próximo vídeo sea sobre el que tú quieras.'
+    ]
+  },
+  {
+    id: 'la-noche-de-animas',
+    eyebrow: 'GUIÓN · ALISTE',
+    badge: null,
+    title: 'La Noche de Ánimas',
+    author: 'Por Alberto Hernández',
+    paragraphs: [
+      'En Aliste hay una noche en la que la gente no piensa solo en los vivos, piensa también en los que ya no están entre nosotros. Y en Pobladura esa noche se vive con una intensidad que de verdad impresiona. Es la noche de ánimas. No es una fiesta cualquiera, no es una noche más. Es una antigua tradición en la que el pueblo se prepara para recordar a los difuntos, pero también para respetar algo que siempre ha dado miedo: la posibilidad de que los muertos sigan caminando entre nosotros, entre los vivos. Antiguamente, los mozos subían al monte para recoger leña y encender una gran hoguera, la carbonera, a la puerta de la iglesia.',
+      'Ese fuego no era solo luz, era una forma de purificación, como si el pueblo abriera un camino a esas almas. Después, en las casas todo cambiaba. Se limpiaba la mesa, se cubría con un paño blanco y se dejaban alimentos para los difuntos: pan, embutido. Una mesa preparada, como si alguien que ya no está pudiera volver a entrar en casa. Porque en esa noche el recuerdo no se quedaba en la cabeza, salía de ella, se hacía tangible en esa mesa cubierta con un paño blanco de la que os he hablado.',
+      'Cuando llegaba la hora, las campanas llamaban a todos. El pueblo salía en procesión rezando por las ánimas. Silencio, fuego y mantones negros en las mujeres. En la comarca aparecen también las capas pardas, pero no todas las localidades las usan igual. Una imagen que mezcla respeto, misterio y una sensación de nudo en el estómago, como si fuera la de estar viviendo algo que viene de hace mucho tiempo atrás y que es más grande que nosotros. Y junto a esa tradición aparece la parte más inquietante.',
+      'Y eso es lo que hace tan potente esta tradición. No habla solo de miedo, habla de memoria, de respeto por los que ya no están y de una forma muy nuestra de entender que los muertos no desaparecen del todo mientras alguien siga nombrándolos. Y ahora te pregunto a ti: si esa noche escucharas campanas en mitad del silencio y supieras que en Pobladura de Aliste se encienden hogueras para las ánimas, ¿te atreverías a salir al camino o preferirías quedarte en casa?'
+    ]
+  },
+  {
+    id: 'virgen-sobrevivio-fuego',
+    eyebrow: 'GUIÓN · TIERRA DE ALBA',
+    badge: null,
+    title: 'La Virgen que sobrevivió al Fuego',
+    author: 'Por Alberto Hernández',
+    paragraphs: [
+      'Hoy no te voy a enseñar ninguna villa de Zamora ni ningún castillo medieval. Te voy a hablar de un pueblo minúsculo de Zamora, en plena Tierra de Alba, donde una virgen medieval sobrevivió a un incendio y todavía protege hoy a sus vecinos. Perilla de Castro apenas llega a unos ciento cincuenta habitantes. Allí campos, silencio, pero dentro de su iglesia de San Martín se guarda una historia que muy poca gente conoce. En esta iglesia se venera a la Virgen de Roaces, un busto del siglo XIV que se salvó de las llamas cuando su antigua ermita, situada a las afueras del pueblo, quedó completamente destruida por un incendio.',
+      'Piensa en esta escena: la ermita ardiendo, el techo cayendo y solo la imagen de la virgen salvada, llevada al interior de la iglesia para que el pueblo no perdiera su devoción. Hoy esa misma imagen preside un retablo lateral, siempre rodeada de flores, siempre rodeada de ofrendas, como si todo el pueblo estuviera recordando cada día que una vez el fuego lo arrasó todo. Todo menos su fe. Y mientras muchos de estos pueblos se vacían, la Virgen de Roaces sigue ahí, en Perilla de Castro, manteniendo viva una historia que casi nadie cuenta, en un rincón de Zamora que no vas a ver en los típicos vídeos de influencers.',
+      'Si te gusta que te hable de más pequeños pueblos con historias reales como esta, quédate en mi perfil, porque la España vaciada, o mejor dicho, la Zamora vaciada, tiene mucha más vida de la que te imaginas.'
+    ]
+  },
+  {
+    id: 'castillo-derrotado-jamas-vencido',
+    eyebrow: 'GUIÓN · ALFOZ DE TORO',
+    badge: null,
+    title: 'El Castillo Derrotado pero Jamás Vencido',
+    author: 'Por Alberto Hernández',
+    paragraphs: [
+      'Este castillo no se levantó solo para defenderse, sino también para demostrar poder. El castillo de Villalonso, cerca de Toro, en Zamora, se alza en una llanura donde ya hubo una fortaleza de órdenes militares durante la Edad Media. Lo que hoy vemos es una fortaleza señorial del siglo XV, con planta cuadrada, cubos en las esquinas y una torre del homenaje que domina su interior. La familia que lo hizo grande es la de los Ulloa. Juan de Ulloa, regidor y alcaide de Toro, apodado en los romances como el Trasquilado, se convirtió en señor de Villalonso.',
+      'Junto a su esposa, María de Sarmiento, levantaron el castillo que conocemos, colocando sus escudos sobre la puerta como marca de su poder y de su linaje. En la guerra, por quién debía gobernar Castilla, los Ulloa se pusieron del lado de Juana, conocida como la Beltraneja, frente a los Reyes Católicos. Juan de Ulloa murió defendiendo este castillo. Su viuda continuó la resistencia, pero fue derrotada y tuvo que entregar Toro, Mota del Marqués y Villalonso a Isabel y Fernando.',
+      'Su hijo, Diego de Ulloa, más tarde, unos cuantos años, se puso del lado de los comuneros, que se alzaron contra el rey Carlos I por los abusos de su gobierno. Tras la derrota de los comuneros, el rey lo condenó a muerte, pero Diego salvó la vida pagando una gran suma de dinero y recuperó sus bienes, incluido el castillo de Villalonso, de modo que la familia siguió siendo señora de estas tierras. Hoy el castillo es de propiedad privada y ahora mismo se puede visitar los domingos de doce de la mañana a dos de la tarde.',
+      'Es una fortaleza medieval que sigue en pie, que está perfectamente conservada y que además nos recuerda quién fue y quién quiso mandar en esta tierra. Os invito a todos y todas a que visitéis Villalonso y su castillo, que además allí os explican la historia, la fascinante historia de este lugar.'
+    ]
   }
 ];
 
