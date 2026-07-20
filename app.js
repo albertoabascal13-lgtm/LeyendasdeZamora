@@ -96,7 +96,8 @@ const COMARCAS = {
     leyendas: [
       { titulo: 'La Virgen del Viso',      url: 'https://www.instagram.com/alberto_hdez13/reel/DVeWknOiNQg/' },
       { titulo: 'El Enigma de Entrala',    url: 'https://www.instagram.com/alberto_hdez13/reel/DXKcYgziBEk/' },
-      { titulo: 'El Cristo de Morales',    url: 'https://www.instagram.com/alberto_hdez13/reel/DXSVDquCAy-/' }
+      { titulo: 'El Cristo de Morales',    url: 'https://www.instagram.com/alberto_hdez13/reel/DXSVDquCAy-/' },
+      { titulo: 'Peleas de Arriba llama', url: 'https://www.instagram.com/alberto_hdez13/reel/DavhSzJo4Hw/' }
     ]
   },
   'guarena': {
