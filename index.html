@@ -324,6 +324,13 @@
           <span class="extras-card-arrow">→</span>
         </button>
 
+        <button class="extras-card" data-page="juego">
+          <span class="extras-card-icon">🗺</span>
+          <span class="extras-card-title">El Gran Explorador</span>
+          <span class="extras-card-desc">Pon a prueba tu conocimiento explorando las doce comarcas.</span>
+          <span class="extras-card-arrow">→</span>
+        </button>
+
       </div>
     </section>
 
@@ -367,6 +374,114 @@
           <p class="escritos-index-desc">Los textos que dan vida a cada vídeo. La investigación detrás de las leyendas.</p>
         </div>
         <ul class="escritos-list" id="folklore-list"></ul>
+      </div>
+    </section>
+
+    <!-- ══════════════ EL GRAN EXPLORADOR ══════════════ -->
+    <section id="page-juego" class="page">
+      <div class="escritos-nav">
+        <button class="escritos-back" data-page="extras">← EXTRAS</button>
+        <span class="escritos-breadcrumb">EXTRAS · EL GRAN EXPLORADOR</span>
+      </div>
+      <div class="juego-wrap">
+
+        <div class="juego-head">
+          <div>
+            <span class="eyebrow">EXPLORA LAS DOCE COMARCAS</span>
+            <h2 class="juego-title">El Gran Explorador</h2>
+          </div>
+          <div class="juego-score-wrap">
+            <span class="juego-score-label">COMARCAS DESCUBIERTAS</span>
+            <span class="juego-score-num"><span id="juego-found">0</span> / 11</span>
+            <div class="juego-prog"><div class="juego-prog-fill" id="juego-prog-fill"></div></div>
+          </div>
+        </div>
+
+        <div class="juego-layout">
+
+          <div class="juego-map-box">
+            <svg id="juego-svg" viewBox="0 0 580 480" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <polygon class="jc-shape" data-id="sanabria"      points="0,0 186,0 186,200 0,200"/>
+                <polygon class="jc-shape" data-id="carballeda"    points="186,0 290,0 290,200 186,200"/>
+                <polygon class="jc-shape" data-id="benavente"     points="290,0 450,0 450,200 290,200"/>
+                <polygon class="jc-shape" data-id="tierra-campos" points="450,0 580,0 580,200 450,200"/>
+                <polygon class="jc-shape" data-id="aliste"        points="0,200 162,200 162,340 0,340"/>
+                <polygon class="jc-shape" data-id="tabara"        points="162,200 290,200 290,280 162,280"/>
+                <polygon class="jc-shape" data-id="alba"          points="162,280 290,280 290,340 162,340"/>
+                <polygon class="jc-shape" data-id="tierra-pan"    points="290,200 450,200 450,340 290,340"/>
+                <polygon class="jc-shape" data-id="toro"          points="450,200 580,200 580,340 450,340"/>
+                <polygon class="jc-shape" data-id="sayago"        points="0,340 162,340 162,480 0,480"/>
+                <polygon class="jc-shape" data-id="tierra-vino"   points="162,340 450,340 450,480 162,480"/>
+                <polygon class="jc-shape" data-id="guarena"       points="450,340 580,340 580,480 450,480"/>
+              </g>
+              <g pointer-events="none">
+                <text class="jc-num" x="8"   y="16">01</text>
+                <text class="jc-num" x="194" y="16">02</text>
+                <text class="jc-num" x="298" y="16">03</text>
+                <text class="jc-num" x="458" y="16">04</text>
+                <text class="jc-num" x="8"   y="216">05</text>
+                <text class="jc-num" x="170" y="216">06</text>
+                <text class="jc-num" x="170" y="296">07</text>
+                <text class="jc-num" x="298" y="216">08</text>
+                <text class="jc-num" x="458" y="216">09</text>
+                <text class="jc-num" x="8"   y="356">10</text>
+                <text class="jc-num" x="170" y="356">11</text>
+                <text class="jc-num" x="458" y="356">12</text>
+              </g>
+              <g pointer-events="none">
+                <text class="jc-label" data-id="sanabria"      x="93"  y="97">SANABRIA</text>
+                <text class="jc-label" data-id="carballeda"    x="238" y="90">LA</text>
+                <text class="jc-label" data-id="carballeda"    x="238" y="108">CARBALLEDA</text>
+                <text class="jc-label" data-id="benavente"     x="370" y="88">BENAVENTE</text>
+                <text class="jc-label" data-id="benavente"     x="370" y="106">Y LOS VALLES</text>
+                <text class="jc-label" data-id="tierra-campos" x="515" y="88">TIERRA DE</text>
+                <text class="jc-label" data-id="tierra-campos" x="515" y="106">CAMPOS</text>
+                <text class="jc-label" data-id="aliste"        x="81"  y="272">ALISTE</text>
+                <text class="jc-label" data-id="tabara"        x="226" y="232">TIERRA DE</text>
+                <text class="jc-label" data-id="tabara"        x="226" y="250">TÁBARA</text>
+                <text class="jc-label" data-id="alba"          x="226" y="312">T. DE ALBA</text>
+                <text class="jc-label" data-id="tierra-pan"    x="370" y="262">TIERRA DEL</text>
+                <text class="jc-label" data-id="tierra-pan"    x="370" y="280">PAN</text>
+                <text class="jc-label" data-id="toro"          x="515" y="262">ALFOZ</text>
+                <text class="jc-label" data-id="toro"          x="515" y="280">DE TORO</text>
+                <text class="jc-label" data-id="sayago"        x="81"  y="410">SAYAGO</text>
+                <text class="jc-label" data-id="tierra-vino"   x="306" y="402">TIERRA DEL VINO</text>
+                <text class="jc-label" data-id="guarena"       x="515" y="402">LA</text>
+                <text class="jc-label" data-id="guarena"       x="515" y="420">GUAREÑA</text>
+              </g>
+            </svg>
+          </div>
+
+          <div class="juego-panel" id="juego-panel">
+
+            <div id="juego-idle">
+              <p class="juego-idle-text">Selecciona una comarca en el mapa para comenzar la exploración.</p>
+              <p class="juego-idle-hint">Las comarcas con leyendas tienen un desafío esperándote. La Carballeda aún no tiene leyendas registradas.</p>
+            </div>
+
+            <div id="juego-challenge" class="juego-hidden">
+              <span class="juego-comarca-name" id="jc-name"></span>
+              <p class="juego-question" id="jc-question"></p>
+              <div class="juego-options" id="jc-options"></div>
+            </div>
+
+            <div id="juego-result" class="juego-hidden">
+              <span class="juego-result-icon" id="jc-icon"></span>
+              <p class="juego-result-text" id="jc-result-text"></p>
+              <p class="juego-lore" id="jc-lore"></p>
+              <button class="btn-outline juego-btn-full" id="jc-continue">CONTINUAR →</button>
+            </div>
+
+            <div id="juego-win" class="juego-hidden">
+              <span class="juego-result-icon">⬛</span>
+              <h3 class="juego-win-title">¡Gran Explorador!</h3>
+              <p class="juego-win-text">Has descubierto las once comarcas con leyendas de Zamora. Las piedras ya te reconocen.</p>
+              <button class="btn-outline juego-btn-full" id="jc-restart">VOLVER A EMPEZAR →</button>
+            </div>
+
+          </div>
+        </div>
       </div>
     </section>
 

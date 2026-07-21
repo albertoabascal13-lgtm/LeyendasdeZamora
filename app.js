@@ -498,6 +498,7 @@ function navigate(id) {
   if (id === 'escritos')    renderEscritos();
   if (id === 'folklore')    renderFolklore();
   if (id === 'story')       renderStory();
+  if (id === 'juego')       { /* game initialises once via IIFE */ }
 }
 
 navLinks.forEach(el => {
@@ -881,6 +882,198 @@ function renderStory() {
     </div>
   `;
 }
+
+/* ══════════════════════════════════════
+   EL GRAN EXPLORADOR — JUEGO
+══════════════════════════════════════ */
+const JUEGO_DATA = {
+  sanabria: {
+    nombre: 'SANABRIA',
+    question: '¿Cómo se llama la criatura mitad hombre mitad lobo de la tradición sanabresa?',
+    options: ['El Lobishome', 'El Hombre del Bosque', 'El Gasgón', 'El Ánima Perdida'],
+    correct: 0,
+    lore: 'El Lobishome es la versión zamorana del hombre lobo. Según la leyenda, el séptimo hijo varón consecutivo estaba condenado a transformarse cada viernes.'
+  },
+  benavente: {
+    nombre: 'BENAVENTE Y LOS VALLES',
+    question: '¿Qué le ataban al toro en la tradición del Toro Enmaromado de Benavente?',
+    options: ['Una soga a los cuernos', 'Un lazo al cuello', 'Cintas de colores', 'Una campana al cuello'],
+    correct: 0,
+    lore: 'El Toro Enmaromado es una de las fiestas más antiguas de Benavente. La soga permite a los vecinos guiar al toro por las calles en un rito que mezcla valentía y tradición.'
+  },
+  'tierra-campos': {
+    nombre: 'TIERRA DE CAMPOS',
+    question: '¿A cuántos vecinos colgaron los franceses de un árbol en San Martín de Valderaduey?',
+    options: ['Catorce', 'Siete', 'Veinte', 'Doce'],
+    correct: 0,
+    lore: 'Los 14 de San Martín son los mártires de la Guerra de la Independencia. Su historia es uno de los episodios más dolorosos y menos conocidos de la resistencia zamorana.'
+  },
+  aliste: {
+    nombre: 'ALISTE',
+    question: '¿Qué dejaban las familias de Aliste sobre la mesa en la Noche de Ánimas?',
+    options: ['Alimentos para los difuntos', 'Una vela encendida', 'Ropa del fallecido', 'Una foto del muerto'],
+    correct: 0,
+    lore: 'En Pobladura de Aliste la Noche de Ánimas era sagrada: la mesa quedaba puesta con comida para los muertos que volvían a visitar el hogar familiar.'
+  },
+  tabara: {
+    nombre: 'TIERRA DE TÁBARA',
+    question: '¿A quiénes espantaba la cabeza parlante de Tábara según la leyenda?',
+    options: ['A los judíos que entraban en la villa', 'A los peregrinos forasteros', 'A los soldados musulmanes', 'A los ladrones nocturnos'],
+    correct: 0,
+    lore: 'La Cabeza Parlante de Tábara es uno de los misterios medievales de Zamora. Se dice que la cabeza gritaba al detectar la presencia de quienes no debían entrar.'
+  },
+  alba: {
+    nombre: 'TIERRA DE ALBA',
+    question: '¿Qué imagen sobrevivió al incendio de la ermita en Perilla de Castro?',
+    options: ['La Virgen de Roaces', 'La Virgen del Viso', 'La Virgen de la Vega', 'La Virgen del Canto'],
+    correct: 0,
+    lore: 'La Virgen de Roaces sobrevivió intacta al fuego que destruyó su ermita en Perilla de Castro. Los vecinos lo interpretaron como un milagro y reforzaron su devoción.'
+  },
+  'tierra-pan': {
+    nombre: 'TIERRA DEL PAN',
+    question: '¿Qué les ocurrió a los hermanos al cerrar los ojos en el castillo de Castrotorafe?',
+    options: ['Aparecieron dentro de su coche', 'Desaparecieron durante horas', 'Vieron visiones del pasado', 'Escucharon voces medievales'],
+    correct: 0,
+    lore: 'Castrotorafe es uno de los castillos más misteriosos de Zamora. Sus ruinas junto al río Esla acumulan siglos de historias sobre apariciones y saltos en el tiempo.'
+  },
+  toro: {
+    nombre: 'ALFOZ DE TORO',
+    question: '¿Qué le impidió a Don Pedro cruzar para unirse a la Batalla de Toro en 1476?',
+    options: ['El río Duero crecido', 'Un ejército enemigo', 'Una tormenta de nieve', 'La traición de sus aliados'],
+    correct: 0,
+    lore: 'La Batalla de Toro de 1476 fue decisiva para la historia de España. El Cristo de las Batallas, según la leyenda, intervino milagrosamente en su desenlace.'
+  },
+  sayago: {
+    nombre: 'SAYAGO',
+    question: '¿De qué se acusaba a la serpiente mamadora en la leyenda de Sayago?',
+    options: ['De mamar de las vacas y mujeres dormidas', 'De envenenar los pozos', 'De robar niños en la noche', 'De destruir los cultivos'],
+    correct: 0,
+    lore: 'La serpiente mamadora es una criatura del folclore rural zamorano. Se decía que se introducía en los establos y casas para alimentarse de la leche de animales y personas.'
+  },
+  'tierra-vino': {
+    nombre: 'TIERRA DEL VINO',
+    question: '¿Cuántos días duró el incendio que devastó Guarrate?',
+    options: ['Ocho días', 'Tres días', 'Dos semanas', 'Un día entero'],
+    correct: 0,
+    lore: 'El incendio de Guarrate en 1932 fue una tragedia que marcó a generaciones. Durante 8 días las llamas consumieron el pueblo mientras los vecinos luchaban por salvar lo que podían.'
+  },
+  guarena: {
+    nombre: 'LA GUAREÑA',
+    question: '¿Qué le arrebató la urraca a la imagen de la Virgen en Argujillo?',
+    options: ['El anillo', 'La corona', 'El manto', 'El cetro'],
+    correct: 0,
+    lore: 'La Pega de Argujillo es una de las leyendas más singulares de La Guareña. Una urraca robó el anillo de la Virgen, y la imagen señaló al pájaro ladrón ante los atónitos vecinos.'
+  }
+};
+
+(function initJuego() {
+  const svg        = document.getElementById('juego-svg');
+  if (!svg) return;
+
+  const panelIdle      = document.getElementById('juego-idle');
+  const panelChallenge = document.getElementById('juego-challenge');
+  const panelResult    = document.getElementById('juego-result');
+  const panelWin       = document.getElementById('juego-win');
+  const foundEl        = document.getElementById('juego-found');
+  const progFill       = document.getElementById('juego-prog-fill');
+  const jcName         = document.getElementById('jc-name');
+  const jcQuestion     = document.getElementById('jc-question');
+  const jcOptions      = document.getElementById('jc-options');
+  const jcIcon         = document.getElementById('jc-icon');
+  const jcResultText   = document.getElementById('jc-result-text');
+  const jcLore         = document.getElementById('jc-lore');
+  const jcContinue     = document.getElementById('jc-continue');
+  const jcRestart      = document.getElementById('jc-restart');
+
+  const discovered   = new Set();
+  const TOTAL        = 11;
+  let   activeComarca = null;
+
+  function showPanel(which) {
+    [panelIdle, panelChallenge, panelResult, panelWin].forEach(p => {
+      if (p) p.classList.toggle('juego-hidden', p !== which);
+    });
+  }
+
+  function updateScore() {
+    const n = discovered.size;
+    if (foundEl)  foundEl.textContent = n;
+    if (progFill) progFill.style.width = Math.round((n / TOTAL) * 100) + '%';
+  }
+
+  function markDiscovered(id) {
+    const shape = svg.querySelector(`[data-id="${id}"]`);
+    if (shape) shape.classList.add('jc-discovered');
+    discovered.add(id);
+    updateScore();
+  }
+
+  function openChallenge(id) {
+    const data = JUEGO_DATA[id];
+    if (!data) return;
+    activeComarca = id;
+
+    jcName.textContent     = data.nombre;
+    jcQuestion.textContent = data.question;
+    jcOptions.innerHTML    = '';
+
+    const shuffled = data.options
+      .map((opt, i) => ({ opt, i }))
+      .sort(() => Math.random() - 0.5);
+
+    shuffled.forEach(({ opt, i }) => {
+      const btn = document.createElement('button');
+      btn.className   = 'juego-option';
+      btn.textContent = opt;
+      btn.addEventListener('click', () => onAnswer(i === data.correct, data));
+      jcOptions.appendChild(btn);
+    });
+
+    showPanel(panelChallenge);
+  }
+
+  function onAnswer(correct, data) {
+    if (correct) {
+      markDiscovered(activeComarca);
+      jcIcon.textContent        = '✓';
+      jcIcon.className          = 'juego-result-icon juego-correct';
+      jcResultText.textContent  = '¡Correcto! Has descubierto esta comarca.';
+    } else {
+      jcIcon.textContent        = '✗';
+      jcIcon.className          = 'juego-result-icon juego-wrong';
+      jcResultText.textContent  = 'No es esa. Podrás intentarlo de nuevo.';
+    }
+    jcLore.textContent = data.lore;
+    showPanel(panelResult);
+  }
+
+  jcContinue && jcContinue.addEventListener('click', () => {
+    if (discovered.size === TOTAL) {
+      showPanel(panelWin);
+    } else {
+      showPanel(panelIdle);
+    }
+    activeComarca = null;
+  });
+
+  jcRestart && jcRestart.addEventListener('click', () => {
+    discovered.clear();
+    svg.querySelectorAll('.jc-shape').forEach(s => s.classList.remove('jc-discovered'));
+    updateScore();
+    showPanel(panelIdle);
+  });
+
+  svg.querySelectorAll('.jc-shape').forEach(shape => {
+    const id = shape.dataset.id;
+    shape.addEventListener('click', () => {
+      if (id === 'carballeda') return;
+      if (discovered.has(id)) return;
+      openChallenge(id);
+    });
+  });
+
+  updateScore();
+})();
 
 /* ══════════════════════════════════════
    COMARCA MAP INTERACTION
