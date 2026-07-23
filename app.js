@@ -471,6 +471,58 @@ const FOLKLORE = [
       'Y por si eso fuera poco, por el pueblo pasa la Vía de la Plata, una ruta histórica del Camino de Santiago. Todavía hoy se pueden ver peregrinos cruzando el núcleo urbano igual que lo hicieron hace siglos. De hecho, en la entrada y salida del pueblo aparecen antiguos miliarios, esas piedras que marcaban la ruta como si el pasado siguiera señalando el camino. Y en el centro de todo está la iglesia de Nuestra Señora de la Asunción, con raíces del siglo quince o XVI, portada original y piezas históricas en su interior, que recuerdan que este pueblo siempre tuvo algo más que nombre.',
       'Tuvo peso, paso e historia. Así que la próxima vez que escuches Roales del Pan, no pienses solo en pan, piensa en frontera medieval, en repoblación, en peregrinos y en un pueblo que lleva siglos vigilando el camino. Porque Roales del Pan se entiende mirando la historia.'
     ]
+  },
+  {
+    id: 'castillo-hollywood',
+    eyebrow: 'GUIÓN · ALFOZ DE TORO',
+    badge: null,
+    title: 'Un Castillo de Hollywood',
+    author: 'Por Alberto Hernández',
+    paragraphs: [
+      '¿Sabías que en Zamora hay un castillo que conquistó a Hollywood? A solo once kilómetros de Toro se alza el castillo de Villalonso, una fortaleza del siglo XV que parece sacado de una película. Y de hecho lo está. Pero antes de su imponente silueta actual, aquí ya hubo un castillo en el siglo XIII vigilando la frontera en tiempos de la Reconquista, bajo órdenes militares como Alcántara o Calatrava, según las fuentes que se consulten. Todo cambió cuando Juan de Ulloa tomó el control en el siglo XV. Él y su esposa María de Sarmiento levantaron el castillo que vemos hoy, dejando claro su poder con el escudo que se puede ver en, en la puerta principal.',
+      'Su estructura, prácticamente intacta, lo convierte en uno de los castillos mejor conservados de Zamora. Torre del Homenaje, planta cuadrada, murallas… Todo sigue en pie, como hace quinientos años. Y entonces llegó el cine. En 1975, este castillo enamoró a Hollywood y se convirtió en escenario de la peli Robin y Marian, una versión mucho más oscura y realista del mito de Robin Hood. Aquí se rodaron escenas clave del asedio inicial. Un Robin Hood envejecido, un mundo cambiado y una historia sobre el paso del tiempo.',
+      'Desde entonces, Villalonso no es solo historia, es también leyenda del cine. Y ahora te pregunto a ti directamente: ¿habías oído hablar de este castillo o acabas de descubrir uno de los secretos mejor guardados de Zamora?'
+    ]
+  },
+  {
+    id: 'la-reina-cautiva',
+    eyebrow: 'GUIÓN · LA GUAREÑA',
+    badge: null,
+    title: 'La Reina Cautiva',
+    author: 'Por Alberto Hernández',
+    paragraphs: [
+      '¿Y si te dijera que en un pueblo de Zamora hay una tumba de hace más de tres mil años? Que apareció por accidente. Un hombre cavaba en la ladera como cualquier otro día, hasta que golpeó algo duro. No era una piedra, era una tumba prehistórica, intacta. Dentro, huesos, pero no de cualquiera. Vasos campaniformes decorados, un puñal de cobre, el brazal de un arquero y hasta una lámina de oro. Los arqueólogos lo tienen claro: aquí enterraron a alguien importante, un jefe, un guerrero, alguien que dominaba estas tierras mucho antes que nosotros.',
+      'Pero eso no es lo único que esconde este lugar, porque en Villabuena del Puente hay algo más y es algo que no aparece en los libros de historia. Una figura femenina que dicen aparece entre las rocas. La llaman la Mora Encantada. Solo aparece durante el amanecer de junio, siempre en el mismo lugar, siempre desapareciendo. Y luego está la otra historia, quizás más inquietante, la de la reina cautiva, encerrada en el Teso de Valdespino, condenada, esperando.',
+      'Solo puede salir una vez al año. Es durante San Juan. Algunos dicen que lleva un peine de plata. Otros, que su belleza no es de este mundo. Pero todos coinciden en algo: si la ves, ya no vas a volver a mirar ese lugar de la misma manera, porque aquí todo encaja demasiado bien. Una tumba antigua, un paisaje lleno de cuevas y una mujer que aparece solo en un momento exacto.',
+      'Así que la próxima vez que pienses y que pises Villabuena del Puente, no quiero que pienses en un pueblo tranquilo. Piensa en lo que hay bajo tierra y en lo que quizá sigue esperando salir una vez al año. Ahora dime, si supieras que esta mujer aparece solo una vez, ¿irías a buscarla? ¿Irías a su encuentro? ¿Irías en busca de lo desconocido?'
+    ]
+  },
+  {
+    id: 'la-cabeza-parlante',
+    eyebrow: 'GUIÓN · TIERRA DE TÁBARA',
+    badge: null,
+    title: 'La Cabeza Parlante',
+    author: 'Por Alberto Hernández',
+    paragraphs: [
+      '¿Imaginas una inteligencia artificial en pleno siglo XV? En la villa de Tábara, en Zamora, existió un dispositivo que hoy nos parece ciencia ficción: la cabeza parlante. Un autómata de metal capaz de vigilar a todo un pueblo desde lo alto de una torre. La leyenda cuenta que un alquimista anónimo tardó treinta años en fabricar este ingenio de bronce. Eh, no era un adorno. Su función era clara y perturbadora: la vigilancia étnico-religiosa. Se dice que la cabeza tenía un sistema de reconocimiento que detectaba si un judío cruzaba las murallas.',
+      'En ese momento, el autómata rompía el silencio gritando: ¡Judío en Tábara! Y no se callaba hasta que la persona abandonaba la jurisdicción, sentenciando con un último: Judío fuera de Tábara. Para nosotros eso suena a sensores de proximidad, a algoritmos biométricos, pero en la Edad Media lo llamaban magia natural. Incluso expertos de la época, como Fray Rodrigo de Yepes, aseguraban que la cabeza no solo gritaba, sino que podía responder a preguntas directas.',
+      'Era una de esas famosas brazen heads o cabezas respondonas de la tradición europea. Hay varias de ellas o varios ejemplos. ¿Es solo un cuento de viejas? No. Grandes intelectuales lo documentaron. Gil Tostado, el erudito más prolífico del siglo XV, dio por cierta su existencia en su obra Supernúmeros. Fray Rodrigo de Yepes, en 1583, confirmó su ubicación exacta en la torre.',
+      'Y el padre Feijoo, ya en la Ilustración, analizó el fenómeno para intentar separar la ciencia de la superstición. Pero el miedo fue más fuerte que la fascinación. Em, el pueblo, la gente, hartos del ruido constante y temiendo que fuera obra del mismísimo diablo, terminó destruyendo la cabeza a pedradas. Un final violento para una tecnología que desafiaba completamente a su época. ¿Y tú crees que era un mecanismo complejo de ingeniería perdida o simplemente una leyenda que alimenta ese control social?'
+    ]
+  },
+  {
+    id: 'la-virgen-de-la-guia',
+    eyebrow: 'GUIÓN · TIERRA DEL PAN',
+    badge: null,
+    title: 'La Virgen de la Guía',
+    author: 'Por Alberto Hernández',
+    paragraphs: [
+      '¿Sabías que existe una virgen que se negaba a abandonar su puente? No es solo una imagen religiosa, es la historia de una guardiana que, según la leyenda, detuvo ejércitos enteros sin mover ni un solo dedo. Hablamos de la Virgen de la Guía. Para muchos es una advocación antigua, pero para Zamora es algo mucho más que eso. No es una entidad abstracta, es una madre de carne y hueso que guía a quienes transitan por la vida. Por eso cala tan hondo en los barrios de la periferia y en los viajeros, porque ella sabe lo que es estar en el camino.',
+      'Su hogar durante siglos fue el Puente de Piedra, un hito de la Vía de la Plata que mide casi doscientos cincuenta metros de longitud. Aquí, junto a la desaparecida Torre de la Goberna, la virgen tenía su pequeño oratorio. Y aquí nace el misterio. Se dice que en el siglo XIII una presencia invisible surgía de la niebla para vigilar el acceso a la ciudad. Cuentan que un ejército enemigo intentó cruzar, en secreto, el puente, pero el terror ante esa fuerza inexplicable los hizo huir.',
+      'Para los vecinos de la margen izquierda no había ningún tipo de duda. Era ella, la Virgen de la Guía, protegiendo la entrada a Zamora. Y hay algo fascinante, que es, eh, su terquedad, porque en el año 1851 la llevaron a la iglesia del Santo Sepulcro. Pero la tradición dice que antes de eso, cada vez que intentaban ponerla a salvo de las riadas del Duero, llevándola a, al centro, a iglesias intramuros, la imagen aparecía de nuevo en su humilde capilla sobre el río a la mañana siguiente. Ella quería estar con su gente entre el barro y el tránsito.',
+      'Por eso hoy, aunque viva en la parroquia, cada año vuelve al Puente de Piedra para su ritual de reverencia. Porque un guía, una guía, nunca abandona a los que están en el camino. ¿Conocías esa leyenda del ejército que huyó ante la niebla? Cuéntamelo en los comentarios. Por cierto, hay muchas Vírgenes de la Guía en, en España, pero la de Zamora es especial y hace muy poquito ha sido su romería y ha sido ese momento en el que acude al Puente de Piedra a hacer la reverencia.',
+      'Tuve la suerte de poder verla, eh, la vi desde lejos, pero el año que viene voy a intentar estar presente en ese camino que hace la Virgen de la Guía, una virgen muy especial que es la guardiana del Puente de Piedra. Comparte este vídeo si te gusta.'
+    ]
   }
 ];
 
