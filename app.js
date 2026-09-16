@@ -552,6 +552,7 @@ function navigate(id) {
   if (id === 'story')       renderStory();
   if (id === 'juego')       { /* game initialises once via IIFE */ }
   if (id === 'mascara-juego') { /* game initialises once via IIFE */ }
+  if (id === 'mascara-arcade') { /* game initialises once via IIFE */ }
 }
 
 navLinks.forEach(el => {
@@ -1453,6 +1454,193 @@ const JUEGO_DATA = {
   });
 
   updateScore();
+})();
+
+/* ══════════════════════════════════════
+   ESCAPA DE LOS CAROCHOS (ARCADE)
+══════════════════════════════════════ */
+(function initMascaraArcade() {
+  const canvas = document.getElementById('arcade-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+
+  const pageEl        = document.getElementById('page-mascara-arcade');
+  const startOverlay  = document.getElementById('ar-start');
+  const overOverlay   = document.getElementById('ar-over');
+  const overText      = document.getElementById('ar-over-text');
+  const btnPlay       = document.getElementById('ar-play');
+  const btnRetry      = document.getElementById('ar-retry');
+  const scoreEl       = document.getElementById('ar-score');
+  const livesEl       = document.getElementById('ar-lives');
+  const bestEl        = document.getElementById('ar-best');
+
+  const BEST_KEY = 'mascaradas-arcade-best';
+  let best = parseInt(localStorage.getItem(BEST_KEY) || '0', 10);
+  bestEl.textContent = best;
+
+  const PLAYER_R = 20;
+  const PLAYER_Y = H - 56;
+
+  let state = 'idle'; // idle | playing | over
+  let player, items, score, lives, invulnUntil, spawnTimer, lastTime, rafId;
+
+  function resetGame() {
+    player = { x: W / 2, targetX: W / 2 };
+    items = [];
+    score = 0;
+    lives = 3;
+    invulnUntil = 0;
+    spawnTimer = 0;
+    scoreEl.textContent = score;
+    updateLives();
+  }
+
+  function updateLives() {
+    livesEl.textContent = '❤'.repeat(Math.max(lives, 0)) + '♡'.repeat(Math.max(3 - lives, 0));
+  }
+
+  function showOverlay(which) {
+    [startOverlay, overOverlay].forEach(o => o.classList.toggle('juego-hidden', o !== which));
+  }
+
+  function startGame() {
+    resetGame();
+    state = 'playing';
+    showOverlay(null);
+    lastTime = performance.now();
+    cancelAnimationFrame(rafId);
+    rafId = requestAnimationFrame(loop);
+  }
+
+  function endGame() {
+    state = 'over';
+    cancelAnimationFrame(rafId);
+    if (score > best) {
+      best = score;
+      localStorage.setItem(BEST_KEY, String(best));
+      overText.textContent = `Puntos: ${score} · ¡Nuevo récord!`;
+    } else {
+      overText.textContent = `Puntos: ${score} · Récord: ${best}`;
+    }
+    bestEl.textContent = best;
+    showOverlay(overOverlay);
+  }
+
+  function spawnItem() {
+    const roll = Math.random();
+    const type = roll < 0.55 ? 'devil' : roll < 0.95 ? 'bell' : 'star';
+    const r = type === 'devil' ? 18 : 16;
+    items.push({
+      x: r + Math.random() * (W - r * 2),
+      y: -r,
+      r,
+      type,
+      vy: 110 + Math.min(score * 3, 260) + Math.random() * 40
+    });
+  }
+
+  function pointerToX(clientX) {
+    const rect = canvas.getBoundingClientRect();
+    return ((clientX - rect.left) / rect.width) * W;
+  }
+
+  function onPointerMove(e) {
+    if (state !== 'playing') return;
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    player.targetX = Math.max(PLAYER_R, Math.min(W - PLAYER_R, pointerToX(clientX)));
+  }
+
+  canvas.addEventListener('mousemove', onPointerMove);
+  canvas.addEventListener('touchmove', e => { onPointerMove(e); e.preventDefault(); }, { passive: false });
+  canvas.addEventListener('touchstart', e => { onPointerMove(e); e.preventDefault(); }, { passive: false });
+
+  const keys = {};
+  window.addEventListener('keydown', e => {
+    if (['ArrowLeft', 'ArrowRight', 'a', 'd', 'A', 'D'].includes(e.key)) keys[e.key] = true;
+  });
+  window.addEventListener('keyup', e => { keys[e.key] = false; });
+
+  function loop(now) {
+    if (!pageEl.classList.contains('active')) {
+      cancelAnimationFrame(rafId);
+      state = 'idle';
+      showOverlay(startOverlay);
+      return;
+    }
+
+    const dt = Math.min((now - lastTime) / 1000, 0.05);
+    lastTime = now;
+
+    const kbSpeed = 320;
+    if (keys['ArrowLeft'] || keys['a'] || keys['A']) player.targetX -= kbSpeed * dt;
+    if (keys['ArrowRight'] || keys['d'] || keys['D']) player.targetX += kbSpeed * dt;
+    player.targetX = Math.max(PLAYER_R, Math.min(W - PLAYER_R, player.targetX));
+    player.x += (player.targetX - player.x) * Math.min(dt * 12, 1);
+
+    spawnTimer -= dt * 1000;
+    if (spawnTimer <= 0) {
+      spawnItem();
+      spawnTimer = Math.max(950 - score * 14, 380);
+    }
+
+    const invuln = performance.now() < invulnUntil;
+    for (let i = items.length - 1; i >= 0; i--) {
+      const it = items[i];
+      it.y += it.vy * dt;
+
+      const dx = it.x - player.x, dy = it.y - PLAYER_Y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < it.r + PLAYER_R * 0.7) {
+        if (it.type === 'devil') {
+          if (!invuln) {
+            lives--;
+            updateLives();
+            invulnUntil = performance.now() + 1200;
+            items.splice(i, 1);
+            if (lives <= 0) { endGame(); return; }
+          }
+          continue;
+        } else {
+          score += it.type === 'star' ? 5 : 1;
+          scoreEl.textContent = score;
+          items.splice(i, 1);
+          continue;
+        }
+      }
+
+      if (it.y - it.r > H) items.splice(i, 1);
+    }
+
+    render(invuln);
+    rafId = requestAnimationFrame(loop);
+  }
+
+  function render(invuln) {
+    ctx.clearRect(0, 0, W, H);
+
+    ctx.fillStyle = 'rgba(200,169,110,0.08)';
+    ctx.fillRect(0, PLAYER_Y + 26, W, H - PLAYER_Y - 26);
+
+    ctx.font = '30px serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    items.forEach(it => {
+      const glyph = it.type === 'devil' ? '👹' : it.type === 'star' ? '✨' : '🔔';
+      ctx.fillText(glyph, it.x, it.y);
+    });
+
+    ctx.save();
+    ctx.globalAlpha = invuln ? (Math.floor(performance.now() / 100) % 2 === 0 ? 0.4 : 1) : 1;
+    ctx.font = '38px serif';
+    ctx.fillText('🎭', player.x, PLAYER_Y);
+    ctx.restore();
+  }
+
+  btnPlay.addEventListener('click', startGame);
+  btnRetry.addEventListener('click', startGame);
+
+  showOverlay(startOverlay);
 })();
 
 /* ══════════════════════════════════════

@@ -1611,6 +1611,82 @@ input, textarea { font: inherit; color: inherit; }
   margin-bottom: 0.6rem;
 }
 
+/* ══════════════════════════════════════
+   ESCAPA DE LOS CAROCHOS (ARCADE)
+══════════════════════════════════════ */
+.arcade-wrap { max-width: 480px; }
+
+.arcade-stage {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+#arcade-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 360 / 600;
+  background: var(--svg-fill, var(--bg-card));
+  touch-action: none;
+  cursor: none;
+}
+
+.arcade-hud {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 0.9rem;
+  font-family: var(--serif);
+  font-variant: small-caps;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: var(--text);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.45), transparent);
+  pointer-events: none;
+}
+
+.arcade-hud-lives { letter-spacing: 0.15em; color: #d9534f; }
+
+.arcade-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.7rem;
+  padding: 2rem 1.6rem;
+  background: rgba(10, 8, 5, 0.88);
+}
+
+.arcade-icon {
+  font-size: 2.6rem;
+  margin-bottom: 0.2rem;
+}
+
+.arcade-overlay-title {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.arcade-overlay-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  max-width: 30ch;
+}
+
 /* responsive already added inside @media block above */
   /* ── MAPA SVG: etiquetas más grandes para que se lean al escalar ── */
   .c-label { font-size: 16px; }

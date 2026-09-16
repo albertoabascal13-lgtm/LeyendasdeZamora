@@ -338,6 +338,13 @@
           <span class="extras-card-arrow">→</span>
         </button>
 
+        <button class="extras-card" data-page="mascara-arcade">
+          <span class="extras-card-icon">👹</span>
+          <span class="extras-card-title">Escapa de los Carochos</span>
+          <span class="extras-card-desc">Esquiva a los diablos, atrapa los cencerros y consigue el mejor récord.</span>
+          <span class="extras-card-arrow">→</span>
+        </button>
+
       </div>
     </section>
 
@@ -515,6 +522,53 @@
         </div>
 
         <div class="mg-grid" id="mg-grid"></div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════ ESCAPA DE LOS CAROCHOS (ARCADE) ══════════════ -->
+    <section id="page-mascara-arcade" class="page">
+      <div class="escritos-nav">
+        <button class="escritos-back" data-page="extras">← EXTRAS</button>
+        <span class="escritos-breadcrumb">EXTRAS · ESCAPA DE LOS CAROCHOS</span>
+      </div>
+
+      <div class="juego-wrap arcade-wrap">
+
+        <div class="juego-head">
+          <div>
+            <span class="eyebrow">ARCADE · MASCARADAS DE ZAMORA</span>
+            <h2 class="juego-title">Escapa de los Carochos</h2>
+            <p class="mg-desc">Mueve el ratón o el dedo para esquivar a los diablos 👹 y atrapar los cencerros 🔔. Las estrellas ✨ valen más puntos.</p>
+          </div>
+          <div class="juego-score-wrap">
+            <span class="juego-score-label">RÉCORD</span>
+            <span class="juego-score-num" id="ar-best">0</span>
+          </div>
+        </div>
+
+        <div class="arcade-stage" id="arcade-stage">
+          <canvas id="arcade-canvas" width="360" height="600"></canvas>
+
+          <div class="arcade-hud">
+            <span class="arcade-hud-score">PUNTOS · <span id="ar-score">0</span></span>
+            <span class="arcade-hud-lives" id="ar-lives">❤❤❤</span>
+          </div>
+
+          <div class="arcade-overlay" id="ar-start">
+            <span class="arcade-icon">👹</span>
+            <h3 class="arcade-overlay-title">Escapa de los Carochos</h3>
+            <p class="arcade-overlay-text">Esquiva a los diablos y atrapa los cencerros y las estrellas. Tres vidas, sin límite de tiempo. ¿Cuánto aguantas?</p>
+            <button class="btn-outline juego-btn-full" id="ar-play">JUGAR →</button>
+          </div>
+
+          <div class="arcade-overlay juego-hidden" id="ar-over">
+            <span class="arcade-icon" id="ar-over-icon">👹</span>
+            <h3 class="arcade-overlay-title">Fin del juego</h3>
+            <p class="arcade-overlay-text" id="ar-over-text"></p>
+            <button class="btn-outline juego-btn-full" id="ar-retry">JUGAR DE NUEVO →</button>
+          </div>
+        </div>
 
       </div>
     </section>
