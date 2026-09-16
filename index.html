@@ -331,6 +331,13 @@
           <span class="extras-card-arrow">→</span>
         </button>
 
+        <button class="extras-card" data-page="mascara-juego">
+          <span class="extras-card-icon">🎭</span>
+          <span class="extras-card-title">Colecciona las Mascaradas</span>
+          <span class="extras-card-desc">Adivina y desbloquea los diablos, zangarrones y carochos de la provincia.</span>
+          <span class="extras-card-arrow">→</span>
+        </button>
+
       </div>
     </section>
 
@@ -485,6 +492,33 @@
       </div>
     </section>
 
+    <!-- ══════════════ COLECCIONA LAS MASCARADAS ══════════════ -->
+    <section id="page-mascara-juego" class="page">
+      <div class="escritos-nav">
+        <button class="escritos-back" data-page="extras">← EXTRAS</button>
+        <span class="escritos-breadcrumb">EXTRAS · COLECCIONA LAS MASCARADAS</span>
+      </div>
+
+      <div class="juego-wrap">
+
+        <div class="juego-head">
+          <div>
+            <span class="eyebrow">DIABLOS · ZANGARRONES · CAROCHOS</span>
+            <h2 class="juego-title">Colecciona las Mascaradas</h2>
+            <p class="mg-desc">Toca una carta, adivina su nombre y desbloquéala. Todas nacen de las mascaradas de invierno reales de la provincia.</p>
+          </div>
+          <div class="juego-score-wrap">
+            <span class="juego-score-label">MÁSCARAS DESCUBIERTAS</span>
+            <span class="juego-score-num"><span id="mg-found">0</span> / <span id="mg-total">—</span></span>
+            <div class="juego-prog"><div class="juego-prog-fill" id="mg-prog-fill"></div></div>
+          </div>
+        </div>
+
+        <div class="mg-grid" id="mg-grid"></div>
+
+      </div>
+    </section>
+
     <!-- ══════════════ BUZÓN ══════════════ -->
     <section id="page-buzon" class="page">
       <div class="page-header">
@@ -536,6 +570,33 @@
     </section>
 
   </main>
+
+  <!-- Modal de desafío — Colecciona las Mascaradas (fuera de .page para que el position:fixed no se rompa por la animación de las páginas) -->
+  <div class="mg-modal-backdrop" id="mg-modal-backdrop">
+    <div class="mg-modal">
+
+      <div id="mg-challenge">
+        <span class="juego-comarca-name" id="mg-clue"></span>
+        <p class="juego-question">¿Cómo se llama esta mascarada?</p>
+        <div class="juego-options" id="mg-options"></div>
+      </div>
+
+      <div id="mg-result" class="juego-hidden">
+        <span class="juego-result-icon" id="mg-result-icon"></span>
+        <h3 class="mg-result-name" id="mg-result-name"></h3>
+        <p class="juego-lore" id="mg-result-text"></p>
+        <button class="btn-outline juego-btn-full" id="mg-continue">CONTINUAR →</button>
+      </div>
+
+      <div id="mg-win" class="juego-hidden">
+        <span class="juego-result-icon">🎭</span>
+        <h3 class="juego-win-title">¡Colección completa!</h3>
+        <p class="juego-win-text">Has descubierto todas las mascaradas de invierno de la provincia de Zamora. Bien de Interés Cultural, candidatas a Patrimonio de la Humanidad por la UNESCO.</p>
+        <button class="btn-outline juego-btn-full" id="mg-restart">VOLVER A EMPEZAR →</button>
+      </div>
+
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>

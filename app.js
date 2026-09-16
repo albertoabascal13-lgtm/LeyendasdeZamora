@@ -551,6 +551,7 @@ function navigate(id) {
   if (id === 'folklore')    renderFolklore();
   if (id === 'story')       renderStory();
   if (id === 'juego')       { /* game initialises once via IIFE */ }
+  if (id === 'mascara-juego') { /* game initialises once via IIFE */ }
 }
 
 navLinks.forEach(el => {
@@ -1300,6 +1301,155 @@ const JUEGO_DATA = {
       if (discovered.has(id)) return;
       openChallenge(id);
     });
+  });
+
+  updateScore();
+})();
+
+/* ══════════════════════════════════════
+   COLECCIONA LAS MASCARADAS
+══════════════════════════════════════ */
+(function initMascaraJuego() {
+  const grid = document.getElementById('mg-grid');
+  if (!grid) return;
+
+  const foundEl         = document.getElementById('mg-found');
+  const totalEl         = document.getElementById('mg-total');
+  const progFill        = document.getElementById('mg-prog-fill');
+  const backdrop        = document.getElementById('mg-modal-backdrop');
+  const panelChallenge  = document.getElementById('mg-challenge');
+  const panelResult     = document.getElementById('mg-result');
+  const panelWin        = document.getElementById('mg-win');
+  const clueEl          = document.getElementById('mg-clue');
+  const optionsEl       = document.getElementById('mg-options');
+  const resultIcon      = document.getElementById('mg-result-icon');
+  const resultName      = document.getElementById('mg-result-name');
+  const resultText      = document.getElementById('mg-result-text');
+  const btnContinue     = document.getElementById('mg-continue');
+  const btnRestart      = document.getElementById('mg-restart');
+
+  // Mascaradas únicas (algunas fechas repiten la misma mascarada: p.ej. el Carnaval en dos días)
+  const seenKeys = new Set();
+  const MASKS = MASCARADAS.filter(m => {
+    const key = m.name + '|' + m.lugar;
+    if (seenKeys.has(key)) return false;
+    seenKeys.add(key);
+    return true;
+  }).map((m, i) => ({ ...m, id: 'm' + i }));
+
+  const TOTAL = MASKS.length;
+  totalEl.textContent = TOTAL;
+
+  const discovered = new Set();
+  let activeMask = null;
+
+  function updateScore() {
+    foundEl.textContent = discovered.size;
+    progFill.style.width = Math.round((discovered.size / TOTAL) * 100) + '%';
+  }
+
+  function showModalPanel(which) {
+    [panelChallenge, panelResult, panelWin].forEach(p => {
+      p.classList.toggle('juego-hidden', p !== which);
+    });
+  }
+
+  function openModal()  { backdrop.classList.add('mg-open'); }
+  function closeModal() { backdrop.classList.remove('mg-open'); activeMask = null; }
+
+  function openChallenge(mask) {
+    activeMask = mask;
+    clueEl.textContent = `Se celebra en ${mask.lugar} (${mask.comarca}), el ${mask.day} de ${mask.month}.`;
+    optionsEl.innerHTML = '';
+
+    const shuffledPool = MASKS.filter(m => m.name !== mask.name).sort(() => Math.random() - 0.5);
+    const seenNames = new Set();
+    const distractors = [];
+    for (const m of shuffledPool) {
+      if (seenNames.has(m.name)) continue;
+      seenNames.add(m.name);
+      distractors.push(m.name);
+      if (distractors.length === 3) break;
+    }
+
+    const options = [mask.name, ...distractors].sort(() => Math.random() - 0.5);
+
+    options.forEach(name => {
+      const btn = document.createElement('button');
+      btn.className = 'juego-option';
+      btn.textContent = name;
+      btn.addEventListener('click', () => onAnswer(name === mask.name));
+      optionsEl.appendChild(btn);
+    });
+
+    showModalPanel(panelChallenge);
+    openModal();
+  }
+
+  function markDiscovered(mask) {
+    const card = grid.querySelector(`[data-id="${mask.id}"]`);
+    if (card) card.classList.add('mg-discovered');
+    discovered.add(mask.id);
+    updateScore();
+  }
+
+  function onAnswer(correct) {
+    resultName.textContent = activeMask.name;
+    if (correct) {
+      markDiscovered(activeMask);
+      resultIcon.textContent   = '✓';
+      resultIcon.className     = 'juego-result-icon juego-correct';
+      resultText.textContent   = `¡Correcto! Así se llama la mascarada de ${activeMask.lugar}, en ${activeMask.comarca}.`;
+    } else {
+      resultIcon.textContent   = '✗';
+      resultIcon.className     = 'juego-result-icon juego-wrong';
+      resultText.textContent   = `No es esa. Esta es la mascarada de ${activeMask.lugar}, en ${activeMask.comarca}. Podrás intentarlo de nuevo.`;
+    }
+    showModalPanel(panelResult);
+  }
+
+  btnContinue.addEventListener('click', () => {
+    if (discovered.size === TOTAL) {
+      showModalPanel(panelWin);
+    } else {
+      closeModal();
+    }
+  });
+
+  btnRestart.addEventListener('click', () => {
+    discovered.clear();
+    grid.querySelectorAll('.mg-card').forEach(c => c.classList.remove('mg-discovered'));
+    updateScore();
+    closeModal();
+  });
+
+  backdrop.addEventListener('click', e => {
+    if (e.target === backdrop) closeModal();
+  });
+
+  MASKS.forEach(mask => {
+    const card = document.createElement('button');
+    card.className   = 'mg-card';
+    card.dataset.id   = mask.id;
+    card.innerHTML = `
+      <div class="mg-card-inner">
+        <div class="mg-card-face mg-card-back">
+          <span class="mg-card-icon">🎭</span>
+          <span class="mg-card-date">${mask.day} ${mask.month}</span>
+          <span class="mg-card-hint">Toca para descubrir</span>
+        </div>
+        <div class="mg-card-face mg-card-front">
+          <span class="mg-card-name">${mask.name}</span>
+          <span class="mg-card-lugar">${mask.lugar}</span>
+          <span class="mg-card-comarca">${mask.comarca}</span>
+        </div>
+      </div>
+    `;
+    card.addEventListener('click', () => {
+      if (discovered.has(mask.id)) return;
+      openChallenge(mask);
+    });
+    grid.appendChild(card);
   });
 
   updateScore();

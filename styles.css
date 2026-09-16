@@ -1471,6 +1471,146 @@ input, textarea { font: inherit; color: inherit; }
   margin-bottom: 1.4rem;
 }
 
+/* ══════════════════════════════════════
+   COLECCIONA LAS MASCARADAS
+══════════════════════════════════════ */
+.mg-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-top: 0.6rem;
+  max-width: 46ch;
+}
+
+.mg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.mg-card {
+  aspect-ratio: 3 / 4;
+  perspective: 900px;
+  padding: 0;
+  background: none;
+}
+
+.mg-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s var(--ease);
+  transform-style: preserve-3d;
+}
+
+.mg-card.mg-discovered .mg-card-inner { transform: rotateY(180deg); }
+.mg-card.mg-discovered { cursor: default; }
+
+.mg-card-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.8rem;
+  background: var(--bg-card);
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.mg-card:not(.mg-discovered):hover .mg-card-back {
+  background: var(--bg-hover);
+  border-color: var(--accent);
+}
+
+.mg-card-icon {
+  font-size: 1.6rem;
+  opacity: 0.6;
+}
+
+.mg-card-date {
+  font-family: var(--serif);
+  font-variant: small-caps;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+}
+
+.mg-card-hint {
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.mg-card-front {
+  transform: rotateY(180deg);
+  border-color: var(--accent);
+}
+
+.mg-card-name {
+  font-family: var(--serif);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.25;
+}
+
+.mg-card-lugar {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.mg-card-comarca {
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+}
+
+/* ── modal de desafío ── */
+.mg-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s var(--ease);
+}
+
+.mg-modal-backdrop.mg-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mg-modal {
+  width: 100%;
+  max-width: 420px;
+  max-height: 85vh;
+  overflow-y: auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 2rem 1.8rem;
+}
+
+.mg-result-name {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.6rem;
+}
+
 /* responsive already added inside @media block above */
   /* ── MAPA SVG: etiquetas más grandes para que se lean al escalar ── */
   .c-label { font-size: 16px; }
@@ -1543,4 +1683,9 @@ input, textarea { font: inherit; color: inherit; }
   .relato-title { font-size: clamp(1.5rem, 6vw, 2.2rem); }
   .relato-body { font-size: 1rem; line-height: 1.8; }
   .relato-body p:first-child::first-letter { font-size: 3rem; }
+
+  /* ── COLECCIONA LAS MASCARADAS ── */
+  .mg-grid { grid-template-columns: repeat(auto-fill, minmax(105px, 1fr)); gap: 0.7rem; }
+  .mg-card-name { font-size: 0.75rem; }
+  .mg-modal { padding: 1.6rem 1.3rem; }
 }
